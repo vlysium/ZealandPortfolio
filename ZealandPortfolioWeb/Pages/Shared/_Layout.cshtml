@@ -1,15 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@ViewData["Title"] - Zealand Portfolio</title>
-  <script type="importmap"></script>
-  <script defer src="~/js/script.js" asp-append-version="true"></script>
-  <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
-</head>
-<body>
-  @RenderBody()
-  @await RenderSectionAsync("Scripts", required: false)
-</body>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta robots="noindex, nofollow" />
+    <title>@ViewData["Title"] - Zealand Portfolio</title>
+    <script type="importmap"></script>
+    <script defer src="~/js/script.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <main>
+        @RenderBody()
+      </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+  </body>
 </html>

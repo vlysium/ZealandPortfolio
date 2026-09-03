@@ -1,9 +1,13 @@
+/* #region global */
 :root {
 	--color-background: oklch(0.9601 0.002 286.37);
 	--color-foreground: oklch(0.2397 0.0019 286.26);
 	--color-accent: oklch(0.9369 0.1283 102.82);
 	--color-accent-dark: oklch(0.926265 0.147827 102.8842);
 	--color-accent-light: oklch(0.9482 0.106 102.64);
+
+	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
+	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
 }
 
 *, *::before, *::after {
@@ -15,4 +19,148 @@
 html {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
+	font-family: "Google Sans", sans-serif;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+p {
+	color: var(--color-muted);
+	line-height: 1.5;
+}
+
+.app {
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+/* #endregion global */
+/* #region profile */
+.profile {
+	border-bottom: 1px solid var(--color-border);
+
+	@media (min-width: 48rem) {
+		border-inline: 1px solid var(--color-border);
+	}
+}
+
+.profile-top {
+	display: flex;
+	flex-direction: row;
+	gap: 1.5rem;
+	padding: 0.75rem;
+	padding-top: 2.25rem;
+
+	@media (min-width: 40rem) {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+.profile-picture {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	filter: grayscale(0.75) contrast(1.125);
+
+	@media (min-width: 40rem) {
+		width: 12rem;
+		height: 12rem;
+	}
+}
+
+.profile-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.profile-name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.25rem;
+
+	@media (min-width: 40rem) {
+		font-size: 1.75rem;
+	}
+}
+
+.profile-bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 0.75rem;
+	padding-bottom: 2.25rem;
+}
+
+.profile-quote {
+	margin-left: -0.75rem;
+	padding-left: 0.75rem;
+	padding-block: 0.25rem;
+	border-left: 2px solid var(--color-foreground);
+
+	p::before, p::after {
+		color: var(--color-foreground);
+		font-weight: 700;
+		display: inline;
+		font-size: 1.25rem;
+		line-height: 0;
+	}
+
+	p::before {
+		content: "“";
+	}
+
+	p::after {
+		content: "”";
+	}
+}
+
+.profile-link-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
+	list-style: none;
+}
+
+.profile-link {
+	display: flex;
+	flex-direction: row;
+	gap: 0.25rem;
+	align-items: center;
+	color: var(--color-foreground);
+	text-underline-offset: 0.25rem;
+	text-decoration-style: dotted;
+	transition: text-underline-offset 0.15s ease-in-out;
+
+	&:hover {
+		text-underline-offset: 0.375rem;
+	}
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		mask: var(--icon) center / contain no-repeat;
+	}
+
+	&.github {
+		--icon: url("../images/github.svg");
+	}
+
+	&.email {
+		--icon: url("../images/email.svg");
+	}
+
+	&.website {
+		--icon: url("../images/website.svg");
+	}
+}
+/* #endregion profile */
