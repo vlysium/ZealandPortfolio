@@ -1,0 +1,18 @@
+:root {
+	--color-background: oklch(0.9601 0.002 286.37);
+	--color-foreground: oklch(0.2397 0.0019 286.26);
+	--color-accent: oklch(0.9369 0.1283 102.82);
+	--color-accent-dark: oklch(0.926265 0.147827 102.8842);
+	--color-accent-light: oklch(0.9482 0.106 102.64);
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+}
