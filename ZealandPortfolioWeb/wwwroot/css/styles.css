@@ -53,6 +53,20 @@ p {
 	}
 }
 
+.section-header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.section-title {
+	font-size: 1.25rem;
+	margin-left: -0.75rem;
+	padding-left: 0.75rem;
+	padding-block: 0.25rem;
+	border-left: 2px solid var(--color-foreground);
+}
+
 /* #endregion global */
 /* #region profile */
 .profile {
@@ -174,3 +188,117 @@ p {
 	}
 }
 /* #endregion profile */
+/* #region projects */
+.project-section {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 0.75rem;
+}
+
+.project-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.5rem;
+	list-style: none;
+
+	@media (min-width: 40rem) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.project-card {
+	position: relative;
+	background-image: linear-gradient(0deg,color-mix(in oklch, var(--color-foreground) 50%, transparent) 20%, transparent 100%), var(--bg-image);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	filter: grayscale(0.25);
+	overflow: hidden;
+	display: grid;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	aspect-ratio: 16 / 9;
+	text-decoration: none;
+	transition: filter 0.25s;
+
+	&.swc {
+		--bg-image: url("../images/swc.webp");
+	}
+
+	&.swd {
+		--bg-image: url("../images/swd.webp");
+	}
+
+	&.itf {
+		--bg-image: url("../images/itf.webp");
+	}
+
+	&.tek {
+		--bg-image: url("../images/tek.webp");
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--color-accent);
+		opacity: 0;
+		transition: opacity 0.25s;
+	}
+}
+
+.project-card:hover {
+	filter: none;
+
+	&::after {
+		opacity: 1;
+	}
+
+	.project-card-title {
+		color: var(--color-foreground);
+
+		&::after {
+			animation: wiggle 0.25s ease-in-out 2;
+		}
+	}
+}
+
+.project-card-title {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	color: var(--color-background);
+	font-size: 1.5rem;
+	font-weight: 500;
+	place-self: end start;
+	transition: color 0.25s;
+
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		mask: url("../images/arrow-right.svg") center / contain no-repeat;
+	}
+}
+
+@keyframes wiggle {
+	0%, 100% {
+		transform: rotate(0);
+	}
+
+	25% {
+		transform: rotate(-7.5deg);
+	}
+
+	75% {
+		transform: rotate(7.5deg);
+	}
+}
+/* #endregion projects */
