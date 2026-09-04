@@ -38,22 +38,34 @@ p {
 	margin: 0 auto;
 }
 
+/* outline layout */
+.main {
+	& > * {
+		border-bottom: 1px solid var(--color-border);
+
+		@media (min-width: 48rem) {
+			border-inline: 1px solid var(--color-border);
+		}
+	}
+
+	& > *:last-child {
+		border-bottom: none;
+	}
+}
+
 /* #endregion global */
 /* #region profile */
 .profile {
-	border-bottom: 1px solid var(--color-border);
-
-	@media (min-width: 48rem) {
-		border-inline: 1px solid var(--color-border);
-	}
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 2.25rem 0.75rem;
 }
 
 .profile-top {
 	display: flex;
 	flex-direction: row;
 	gap: 1.5rem;
-	padding: 0.75rem;
-	padding-top: 2.25rem;
 
 	@media (min-width: 40rem) {
 		flex-direction: row;
@@ -93,8 +105,6 @@ p {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	padding: 0.75rem;
-	padding-bottom: 2.25rem;
 }
 
 .profile-quote {
