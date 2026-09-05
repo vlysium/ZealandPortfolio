@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ZealandPortfolioLib/ZealandPortfolioLib.csproj" />
   <Project Path="ZealandPortfolioWeb/ZealandPortfolioWeb.csproj" />
 </Solution>
