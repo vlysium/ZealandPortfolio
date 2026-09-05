@@ -6,9 +6,9 @@ namespace ZealandPortfolioLib.Repositories;
 public class GenericPageRepository<T> : IGenericPageRepository<T> where T : PageBase
 {
 	/// <summary>
-	/// The list of pages stored in memory. This list is populated from a JSON file during the initialization of the repository.
+	/// The dictionary that holds the pages stored in memory, with the page ID as the key and the page object as the value.
 	/// </summary>
-	private List<T> _pages = new List<T>();
+	private Dictionary<string, T> _pages = new Dictionary<string, T>();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GenericPageRepository{T}"/> class.
@@ -30,7 +30,7 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 			throw new InvalidOperationException($"The file \"{fileName}\" is empty or does not contain valid JSON.");
 		}
 
-		_pages = JsonSerializer.Deserialize<List<T>>(json)
+		_pages = JsonSerializer.Deserialize<List<T>>(json)?.ToDictionary(page => page.Id)
 			?? throw new InvalidOperationException($"The file \"{fileName}\" does not contain valid JSON for the type \"{typeof(T).Name}\".");
 	}
 
@@ -40,7 +40,7 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <returns>A list of all pages in the repository.</returns>
 	public List<T> ReadAll()
 	{
-		return _pages;
+		return _pages.Values.ToList();
 	}
 
 	/// <summary>
@@ -51,7 +51,9 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <exception cref="KeyNotFoundException">Thrown when no page is found with the specified id.</exception>
 	public T ReadById(string id)
 	{
-		return _pages.FirstOrDefault(page => page.Id == id)
-			?? throw new KeyNotFoundException($"No page found with the id \"{id}\".");
+		return _pages.TryGetValue(id, out T? page)
+        ? page
+        : throw new KeyNotFoundException(
+            $"No page found with the id \"{id}\".");
 	}
 }
