@@ -5,9 +5,9 @@ namespace ZealandPortfolioLib.Models;
 public abstract class PageBase
 {
 	/// <summary>
-	/// Slug of the page. Also acts as the identifier for the page.
+	/// The unique identifier for the page.
 	/// </summary>
-	public required string Slug { get; init; }
+	public required string Id { get; init; }
 
 	/// <summary>
 	/// Name of the page.
@@ -18,6 +18,11 @@ public abstract class PageBase
 	/// Description of the page.
 	/// </summary>
 	public required string Description { get; init; }
+
+	/// <summary>
+	/// Slug of the page.
+	/// </summary>
+	public required string Slug { get; init; }
 
 	/// <summary>
 	/// Image associated with the page.
@@ -31,6 +36,6 @@ public abstract class PageBase
 
 	public override string ToString()
 	{
-		return $"PageBase: Slug: {Slug}, Name: {Name}, Description: {Description}, Image: {Image}";
+		return $"PageBase: Id: {Id}, Name: {Name}, Description: {Description}, Slug: {Slug}, Image: {Image}";
 	}
 }

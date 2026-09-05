@@ -5,9 +5,9 @@ namespace ZealandPortfolioLib;
 public class ProjectCategory : PageBase
 {
 	/// <summary>
-	/// List of projects belonging to the project category.
+	/// List of project IDs belonging to the project category.
 	/// </summary>
-	public required List<Project> Projects { get; init; } = new List<Project>();
+	public required List<string> ProjectIds { get; init; } = new List<string>();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ProjectCategory"/> class.
@@ -16,6 +16,6 @@ public class ProjectCategory : PageBase
 
 	public override string ToString()
 	{
-		return base.ToString() + $", Projects: [{string.Join(", ", Projects)}]";
+		return base.ToString() + $", Projects: [{string.Join(", ", ProjectIds)}]";
 	}
 }
