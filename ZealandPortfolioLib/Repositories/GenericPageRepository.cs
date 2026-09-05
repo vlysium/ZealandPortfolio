@@ -19,13 +19,12 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	public GenericPageRepository(string fileName)
 	{
 		string path = Path.Combine("Data", fileName);
-		string json = File.ReadAllText(path);
-
 		if (!File.Exists(path))
 		{
 			throw new FileNotFoundException($"The file \"{fileName}\" was not found in the \"Data\" folder.");
 		}
 
+		string json = File.ReadAllText(path);
 		if (string.IsNullOrWhiteSpace(json))
 		{
 			throw new InvalidOperationException($"The file \"{fileName}\" is empty or does not contain valid JSON.");
