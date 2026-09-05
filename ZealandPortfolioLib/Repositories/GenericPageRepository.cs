@@ -8,7 +8,7 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <summary>
 	/// The dictionary that holds the pages stored in memory, with the page ID as the key and the page object as the value.
 	/// </summary>
-	private Dictionary<string, T> _pages = new Dictionary<string, T>();
+	private Dictionary<Guid, T> _pages = new Dictionary<Guid, T>();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GenericPageRepository{T}"/> class.
@@ -49,7 +49,7 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <param name="id">The id of the page to read.</param>
 	/// <returns>The page with the specified id.</returns>
 	/// <exception cref="KeyNotFoundException">Thrown when no page is found with the specified id.</exception>
-	public T ReadById(string id)
+	public T ReadById(Guid id)
 	{
 		return _pages.TryGetValue(id, out T? page)
         ? page

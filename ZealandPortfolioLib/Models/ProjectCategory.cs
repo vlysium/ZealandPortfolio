@@ -7,7 +7,7 @@ public class ProjectCategory : PageBase
 	/// <summary>
 	/// List of project IDs belonging to the project category.
 	/// </summary>
-	public required List<string> ProjectIds { get; init; } = new List<string>();
+	public required List<Guid> ProjectIds { get; init; } = new List<Guid>();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ProjectCategory"/> class.

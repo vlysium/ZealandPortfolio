@@ -7,7 +7,7 @@ public abstract class PageBase
 	/// <summary>
 	/// The unique identifier for the page.
 	/// </summary>
-	public required string Id { get; init; }
+	public required Guid Id { get; init; }
 
 	/// <summary>
 	/// Name of the page.
