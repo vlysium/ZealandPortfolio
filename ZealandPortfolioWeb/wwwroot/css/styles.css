@@ -288,7 +288,7 @@ p {
 	display: grid;
 	padding: 0.5rem;
 	border-radius: 0.25rem;
-	aspect-ratio: 16 / 9;
+	aspect-ratio: 3 / 4;
 	text-decoration: none;
 	transition: filter 0.25s;
 
