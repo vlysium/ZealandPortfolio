@@ -268,22 +268,6 @@ p {
 	text-decoration: none;
 	transition: filter 0.25s;
 
-	&.swc {
-		--bg-image: url("../images/swc.webp");
-	}
-
-	&.swd {
-		--bg-image: url("../images/swd.webp");
-	}
-
-	&.itf {
-		--bg-image: url("../images/itf.webp");
-	}
-
-	&.tek {
-		--bg-image: url("../images/tek.webp");
-	}
-
 	&::after {
 		content: "";
 		position: absolute;
