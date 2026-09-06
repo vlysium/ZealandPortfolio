@@ -6,6 +6,11 @@ namespace ZealandPortfolioLib.Repositories;
 public class GenericPageRepository<T> : IGenericPageRepository<T> where T : PageBase
 {
 	/// <summary>
+	/// The name of the file that contains the pages data.
+	/// </summary>
+	private readonly string _fileName;
+
+	/// <summary>
 	/// The dictionary that holds the pages stored in memory, with the page ID as the key and the page object as the value.
 	/// </summary>
 	private Dictionary<Guid, T> _pages = new Dictionary<Guid, T>();
@@ -16,22 +21,24 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <param name="fileName">Name of the file to read the pages from.</param>
 	/// <exception cref="FileNotFoundException">Thrown when the specified file is not found.</exception>
 	/// <exception cref="InvalidOperationException">Thrown when the file is empty or does not contain valid JSON.</exception>
-	public GenericPageRepository(string fileName)
+	public GenericPageRepository()
 	{
-		string path = Path.Combine("Data", fileName);
+		_fileName = $"{typeof(T).Name}.json";
+
+		string path = Path.Combine("Data", _fileName);
 		if (!File.Exists(path))
 		{
-			throw new FileNotFoundException($"The file \"{fileName}\" was not found in the \"Data\" folder.");
+			throw new FileNotFoundException($"The file \"{_fileName}\" was not found in the \"Data\" folder.");
 		}
 
 		string json = File.ReadAllText(path);
 		if (string.IsNullOrWhiteSpace(json))
 		{
-			throw new InvalidOperationException($"The file \"{fileName}\" is empty or does not contain valid JSON.");
+			throw new InvalidOperationException($"The file \"{_fileName}\" is empty or does not contain valid JSON.");
 		}
 
 		_pages = JsonSerializer.Deserialize<List<T>>(json)?.ToDictionary(page => page.Id)
-			?? throw new InvalidOperationException($"The file \"{fileName}\" does not contain valid JSON for the type \"{typeof(T).Name}\".");
+			?? throw new InvalidOperationException($"The file \"{_fileName}\" does not contain valid JSON for the type \"{typeof(T).Name}\".");
 	}
 
 	/// <summary>

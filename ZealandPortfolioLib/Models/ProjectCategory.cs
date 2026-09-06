@@ -1,4 +1,5 @@
-﻿using ZealandPortfolioLib.Models;
+﻿using System.Text.Json.Serialization;
+using ZealandPortfolioLib.Models;
 
 namespace ZealandPortfolioLib;
 
@@ -7,6 +8,7 @@ public class ProjectCategory : PageBase
 	/// <summary>
 	/// List of project IDs belonging to the project category.
 	/// </summary>
+	[JsonPropertyName("project_ids")]
 	public required List<Guid> ProjectIds { get; init; } = new List<Guid>();
 
 	/// <summary>

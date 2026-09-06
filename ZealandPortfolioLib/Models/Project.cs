@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace ZealandPortfolioLib.Models;
 
 public class Project : PageBase
@@ -5,11 +7,13 @@ public class Project : PageBase
 	/// <summary>
 	/// Github link associated with the project.
 	/// </summary>
+	[JsonPropertyName("github_link")]
 	public required Link GithubLink { get; init; }
 
 	/// <summary>
 	/// Live link associated with the project.
 	/// </summary>
+	[JsonPropertyName("live_link")]
 	public required Link LiveLink { get; init; }
 
 	/// <summary>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "8f5d2c1a-6b74-4e91-a3c8-21f9b7d4e602",
+    "name": "Softwarekonstruktion",
+    "description": "",
+    "slug": "swc",
+    "image": {
+      "src": "/images/swc.webp",
+      "alt_text": "Softwarekonstruktion"
+    },
+    "project_ids": []
+  },
+  {
+    "id": "c3a71e8b-42d6-4f95-b129-7e5c8a3d6140",
+    "name": "Softwaredesign",
+    "description": "",
+    "slug": "swd",
+    "image": {
+      "src": "/images/swd.webp",
+      "alt_text": "Softwaredesign"
+    },
+    "project_ids": []
+  },
+  {
+    "id": "5e9b4a27-d183-46fc-8c52-f7a61d9e3b04",
+    "name": "IT og forretningsforståelse",
+    "description": "",
+    "slug": "itf",
+    "image": {
+      "src": "/images/itf.webp",
+      "alt_text": "IT og forretningsforståelse"
+    },
+    "project_ids": []
+  },
+  {
+    "id": "a62f9c35-7d18-4eb4-b503-6c8e1a27f945",
+    "name": "Teknologi",
+    "description": "",
+    "slug": "tek",
+    "image": {
+      "src": "/images/tek.webp",
+      "alt_text": "Teknologi"
+    },
+    "project_ids": []
+  }
+]

@@ -1,4 +1,4 @@
-using System;
+using System.Text.Json.Serialization;
 
 namespace ZealandPortfolioLib.Models;
 
@@ -7,11 +7,13 @@ public class Link
 	/// <summary>
 	/// Href of the link.
 	/// </summary>
+	[JsonPropertyName("href")]
 	public required string Href { get; init; }
 
 	/// <summary>
 	/// Text of the link.
 	/// </summary>
+	[JsonPropertyName("text")]
 	public required string Text { get; init; }
 
 	/// <summary>
