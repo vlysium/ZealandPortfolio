@@ -3,3 +3,22 @@
 @model ZealandPortfolioWeb.Pages.ProjectCategoryModel
 @{
 }
+
+<section class="section project-category-page">
+	<hgroup class="section-header">
+    <h1 class="section-title">@Model.ProjectCategory.Name</h1>
+    <p>@Model.ProjectCategory.Description</p>
+  </hgroup>
+	<ul>
+    @foreach (Project project in Model.ProjectCategory.Projects)
+    {
+		<li>
+			<article>
+				<img src="@project.Image.Src" alt="@project.Image.AltText" />
+				<h2>@project.Name</h2>
+				<p>@project.Description</p>
+			</article>
+		</li>
+    }
+  </ul>
+</section>

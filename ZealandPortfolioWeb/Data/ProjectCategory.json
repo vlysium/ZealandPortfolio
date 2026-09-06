@@ -1,6 +1,6 @@
 [
   {
-    "id": "8f5d2c1a-6b74-4e91-a3c8-21f9b7d4e602",
+    "id": "1ceb0f15-1675-44e0-bcb1-b7cb0f259897",
     "name": "Softwarekonstruktion",
     "description": "",
     "slug": "swc",
@@ -8,10 +8,14 @@
       "src": "/images/swc.webp",
       "alt_text": "Softwarekonstruktion"
     },
-    "project_ids": []
+    "project_ids": [
+      "a7db71f9-daf8-499d-b883-ad0c77cd6689",
+      "ee5ca421-4765-40b0-8807-07218ecc9a4e",
+      "a5772365-2360-4b0a-9dc9-89d96377b1b1"
+    ]
   },
   {
-    "id": "c3a71e8b-42d6-4f95-b129-7e5c8a3d6140",
+    "id": "7485c1c3-83b7-48ba-a8b4-775d037b15a8",
     "name": "Softwaredesign",
     "description": "",
     "slug": "swd",
@@ -22,7 +26,7 @@
     "project_ids": []
   },
   {
-    "id": "5e9b4a27-d183-46fc-8c52-f7a61d9e3b04",
+    "id": "2cd9cee9-2dce-403e-94e5-8785f5832fd2",
     "name": "IT og forretningsforståelse",
     "description": "",
     "slug": "itf",
@@ -33,7 +37,7 @@
     "project_ids": []
   },
   {
-    "id": "a62f9c35-7d18-4eb4-b503-6c8e1a27f945",
+    "id": "eaf54806-aa62-4b0f-838c-c1c35cb65ffe",
     "name": "Teknologi",
     "description": "",
     "slug": "tek",

@@ -1,1 +1,56 @@
-[]
+[
+	{
+		"id": "a7db71f9-daf8-499d-b883-ad0c77cd6689",
+		"name": "Ragnarock Gasolin",
+		"description": "Ragnarock Gasolin var vores første miniprojekt, hvor vi udviklede en interaktiv webapplikation med fokus på Gasolins historie og betydning for dansk rockmusik. Løsningen indeholder blandt andet en historisk tidslinje, biografier, videoer, interviews og QR-kodefunktionalitet, der kobler den fysiske udstilling med webapplikationen. Projektet blev udviklet med Razor Pages, C#, HTML, CSS og Bootstrap. Som en ekstra funktion implementerede vi JavaScript til afspilning af lydfiler med udvalgte Gasolin-numre.",
+		"slug": "ragnarock-gasolin",
+		"image": {
+			"src": "/images/ragnarock-gasolin.webp",
+			"alt_text": "Ragnarock Gasolin"
+		},
+		"github_link": {
+			"href": "https://github.com/vlysium/RagnarockGasolin",
+			"text": "GitHub"
+		},
+		"live_link": {
+			"href": "https://gasolin.vlysium.dev/",
+			"text": "Website"
+		}
+	},
+	{
+		"id": "ee5ca421-4765-40b0-8807-07218ecc9a4e",
+		"name": "DSV og mødebooking",
+		"description": "DSV og mødebooking var vores anden miniprojekt, hvor vi udviklede et internt bookingsystem til håndtering af DSV's mødelokaler. Systemet gør det muligt at se, oprette, redigere og slette bookinger samt filtrere lokaler efter blandt andet kapacitet og udstyr. Vi anvendte 3-lagsmodellen til at strukturere applikationen og skabe en klar opdeling mellem præsentation, forretningslogik og dataadgang. Projektet blev udviklet med Razor Pages, C#, HTML, CSS, Bootstrap, objekter, lister og repositories.",
+		"slug": "dsv-og-moedebooking",
+		"image": {
+			"src": "/images/dsv-og-moedebooking.webp",
+			"alt_text": "DSV og mødebooking"
+		},
+		"github_link": {
+			"href": "https://github.com/vlysium/DSVMeetingRoomBooking",
+			"text": "GitHub"
+		},
+		"live_link": {
+			"href": "https://dsv-booking.vlysium.dev/",
+			"text": "Website"
+		}
+	},
+	{
+		"id": "a5772365-2360-4b0a-9dc9-89d96377b1b1",
+		"name": "Cirkus Luna",
+		"description": "Cirkus Luna var vores 1. semesters eksamensprojekt, hvor vi udviklede en komplet webapplikation til administration af et omrejsende cirkus. Systemet håndterer blandt andet turnéplaner, forestillinger, artister, kunder, billettyper og reservationer. Vi implementerede funktionalitet til søgning, filtrering, sortering og visning af ledige og reserverede pladser samt validering af reservationer. Applikationen blev udviklet i Razor Pages med C#, HTML, CSS og Bootstrap og struktureret efter 3-lagsmodellen med UI-, service- og repository-lag. Fokus var på en brugervenlig løsning med tydelig separation af ansvar og central håndtering af systemets forretningslogik.",
+		"slug": "cirkus-luna",
+		"image": {
+			"src": "/images/cirkus-luna.webp",
+			"alt_text": "Cirkus Luna"
+		},
+		"github_link": {
+			"href": "https://github.com/vlysium/CircusLuna",
+			"text": "GitHub"
+		},
+		"live_link": {
+			"href": "https://circus-luna.vlysium.dev/",
+			"text": "Website"
+		}
+	}
+]
