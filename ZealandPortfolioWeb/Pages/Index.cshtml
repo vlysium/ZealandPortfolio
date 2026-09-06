@@ -44,6 +44,7 @@
     <li>
       <a class="project-card" style="--bg-image: url('@projectCategory.Image.Src');" asp-page="/ProjectCategory" asp-route-category="@projectCategory.Slug">
         <h3 class="project-card-title">@projectCategory.Slug</h3>
+        <span class="project-card-counter">@projectCategory.ProjectIds.Count()</span>
       </a>
     </li>
     }
