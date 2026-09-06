@@ -208,7 +208,6 @@ p {
 	flex-direction: row;
 	gap: 0.25rem;
 	align-items: center;
-	padding: 0.125rem 0.25rem;
 	font-weight: 500;
 	color: var(--color-foreground);
 	text-decoration: none;
@@ -246,7 +245,7 @@ p {
 	}
 }
 
-.profile-link:hover {
+.profile-link:is(:hover, :focus) {
 
 	&::before {
 		animation: wiggle 0.25s ease-in-out 2;
@@ -302,7 +301,7 @@ p {
 	}
 }
 
-.project-card:hover {
+.project-card:is(:hover, :focus) {
 	filter: none;
 
 	&::after {
