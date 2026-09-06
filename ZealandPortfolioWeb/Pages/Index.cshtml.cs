@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ZealandPortfolioLib;
+using ZealandPortfolioLib.Services;
 
 namespace ZealandPortfolioWeb.Pages;
 
 public class IndexModel : PageModel
 {
     /// <summary>
-    /// The repository for accessing project categories.
+    /// The service for accessing project categories.
     /// </summary>
-    private readonly IGenericPageRepository<ProjectCategory> _projectCategoryRepository;
+    private readonly ProjectCategoryService _projectCategoryService;
 
     /// <summary>
     /// Gets or sets the list of project categories to be displayed on the index page.
@@ -17,16 +18,16 @@ public class IndexModel : PageModel
     public List<ProjectCategory> ProjectCategories { get; set; } = new List<ProjectCategory>();
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="IndexModel"/> class with the specified project category repository.
+    /// Initializes a new instance of the <see cref="IndexModel"/> class with the specified project category service.
     /// </summary>
-    /// <param name="projectCategoryRepository">The project category repository to use.</param>
-    public IndexModel(IGenericPageRepository<ProjectCategory> projectCategoryRepository)
+    /// <param name="projectCategoryService">The project category service to use.</param>
+    public IndexModel(ProjectCategoryService projectCategoryService)
     {
-        _projectCategoryRepository = projectCategoryRepository;
+        _projectCategoryService = projectCategoryService;
     }
 
     public void OnGet()
     {
-        ProjectCategories = _projectCategoryRepository.ReadAll();
+        ProjectCategories = _projectCategoryService.GetAllProjectCategories();
     }
 }

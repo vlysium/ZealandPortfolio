@@ -38,13 +38,13 @@ public class ProjectCategoryService
 	}
 
 	/// <summary>
-	/// Gets a project category with its associated projects by its id.
+	/// Gets a project category with its associated projects by its slug.
 	/// </summary>
-	/// <param name="id">The id of the project category to get.</param>
-	/// <returns>The project category with the specified id and its associated projects.</returns>
-	public ProjectCategoryWithProjects GetProjectCategoryWithProjectsById(Guid id)
+	/// <param name="slug">The slug of the project category to get.</param>
+	/// <returns>The project category with the specified slug and its associated projects.</returns>
+	public ProjectCategoryWithProjects GetProjectCategoryWithProjectsBySlug(string slug)
 	{
-		ProjectCategory projectCategory = _projectCategoryRepository.ReadById(id);
+		ProjectCategory projectCategory = _projectCategoryRepository.ReadBySlug(slug);
 		ProjectCategoryWithProjects projectCategoryWithProjects = new ProjectCategoryWithProjects
 		{
 			Id = projectCategory.Id,

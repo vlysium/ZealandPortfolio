@@ -63,4 +63,17 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
         : throw new KeyNotFoundException(
             $"No page found with the id \"{id}\".");
 	}
+
+	/// <summary>
+	/// Reads a page from the repository by its slug.
+	/// </summary>
+	/// <param name="slug">The slug of the page to read.</param>
+	/// <returns>The page with the specified slug.</returns>
+	/// <exception cref="KeyNotFoundException">Thrown when no page is found with the specified slug.</exception>
+	public T ReadBySlug(string slug)
+	{
+		return _pages.Values.FirstOrDefault(page => page.Slug == slug)
+		?? throw new KeyNotFoundException(
+			$"No page found with the slug \"{slug}\".");
+	}
 }

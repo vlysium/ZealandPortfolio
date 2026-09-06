@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<section id="projects" class="project-section">
+<section id="projects" class="section project-section">
   <hgroup class="section-header">
     <h2 class="section-title">Projekter</h2>
     <p>Her kan du se mine projekter inden for de forskellige fagområder.</p>
@@ -42,7 +42,7 @@
     @foreach (ProjectCategory projectCategory in Model.ProjectCategories)
     {
     <li>
-      <a class="project-card" style="--bg-image: url('@projectCategory.Image.Src');" asp-page="#">
+      <a class="project-card" style="--bg-image: url('@projectCategory.Image.Src');" asp-page="/ProjectCategory" asp-route-category="@projectCategory.Slug">
         <h3 class="project-card-title">@projectCategory.Slug</h3>
       </a>
     </li>
