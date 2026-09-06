@@ -20,6 +20,11 @@ html {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
 	font-family: "Google Sans", sans-serif;
+	overflow-x: hidden;
+	
+	@media (min-width: 50rem) {
+		scrollbar-gutter: stable both-edges;
+	}
 }
 
 img {
@@ -40,12 +45,14 @@ p {
 
 /* outline layout */
 .main {
+	min-height: calc(100svh - 3rem);
+
+	@media (min-width: 48rem) {
+		border-inline: 1px solid var(--color-border);
+	}
+
 	& > * {
 		border-bottom: 1px solid var(--color-border);
-
-		@media (min-width: 48rem) {
-			border-inline: 1px solid var(--color-border);
-		}
 	}
 
 	& > *:last-child {
@@ -54,7 +61,20 @@ p {
 }
 
 .footer {
-	border-top: 1px solid var(--color-border);
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--color-border);
+		display: block;
+		height: 1px;
+
+		@media (min-width: 50rem) {
+			background: linear-gradient(90deg, transparent 0%, var(--color-border) 2.5%, var(--color-border) 97.5%, transparent 100%);
+		}
+	}
 }
 
 .footer-content {
@@ -63,6 +83,10 @@ p {
 	margin: 0 auto;
 	font-weight: 500;
 	color: var(--color-foreground);
+
+	@media (min-width: 48rem) {
+		border-inline: 1px solid var(--color-border);
+	}
 }
 
 .section-header {
