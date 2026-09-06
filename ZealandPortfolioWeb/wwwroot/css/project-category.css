@@ -1,0 +1,9 @@
+.project-category-page {
+	padding-top: 2.25rem;
+}
+
+.project-category-page .section-title {
+	@media (min-width: 40rem) {
+		font-size: 1.75rem;
+	}
+}

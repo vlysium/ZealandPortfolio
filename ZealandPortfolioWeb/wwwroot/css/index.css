@@ -10,11 +10,6 @@
 	display: flex;
 	flex-direction: row;
 	gap: 1.5rem;
-
-	@media (min-width: 40rem) {
-		flex-direction: row;
-		justify-content: space-evenly;
-	}
 }
 
 .profile-picture {
@@ -24,8 +19,8 @@
 	filter: grayscale(0.75) contrast(1.125);
 
 	@media (min-width: 40rem) {
-		width: 12rem;
-		height: 12rem;
+		width: 10rem;
+		height: 10rem;
 	}
 }
 
@@ -113,15 +108,15 @@
 	}
 
 	&.github {
-		--icon: url("../images/github.svg");
+		--icon: url("/images/github.svg");
 	}
 
 	&.email {
-		--icon: url("../images/email.svg");
+		--icon: url("/images/email.svg");
 	}
 
 	&.website {
-		--icon: url("../images/website.svg");
+		--icon: url("/images/website.svg");
 	}
 }
 
