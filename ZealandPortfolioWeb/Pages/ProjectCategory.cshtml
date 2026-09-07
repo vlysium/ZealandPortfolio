@@ -4,7 +4,7 @@
 @{
 }
 
-<section class="section project-category-page">
+<section class="project-category-page">
 	<hgroup class="section-header">
     <h1 class="section-title">@Model.ProjectCategory.Name</h1>
     <p>@Model.ProjectCategory.GetInlineDescription()</p>
@@ -17,6 +17,10 @@
 				<img class="project-card-image" src="@project.Image.Src" alt="@project.Image.AltText" />
 				<div class="project-card-content">
 					<h2 class="project-card-title">@project.Name</h2>
+					<ul class="project-card-links">
+						<li><a class="link-with-icon" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
+						<li><a class="link-with-icon" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
+					</ul>
 					<div class="project-card-description">
 						@foreach (string description in project.Description)
 						{

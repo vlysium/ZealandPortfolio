@@ -5,16 +5,22 @@ namespace ZealandPortfolioLib.Models;
 public class Project : PageBase
 {
 	/// <summary>
+	/// Short description of the project.
+	/// </summary>
+	[JsonPropertyName("description_short")]
+	public required string DescriptionShort { get; init; }
+
+	/// <summary>
 	/// Github link associated with the project.
 	/// </summary>
 	[JsonPropertyName("github_link")]
-	public required Link GithubLink { get; init; }
+	public required string GithubLink { get; init; }
 
 	/// <summary>
-	/// Live link associated with the project.
+	/// Website link associated with the project.
 	/// </summary>
-	[JsonPropertyName("live_link")]
-	public required Link LiveLink { get; init; }
+	[JsonPropertyName("website_link")]
+	public required string WebsiteLink { get; init; }
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Project"/> class.
@@ -23,6 +29,6 @@ public class Project : PageBase
 
 	public override string ToString()
 	{
-		return base.ToString() + $", GithubLink: {GithubLink}, LiveLink: {LiveLink}";
+		return base.ToString() + $", DescriptionShort: {DescriptionShort}, GithubLink: {GithubLink}, WebsiteLink: {WebsiteLink}";
 	}
 }

@@ -8,7 +8,6 @@
 
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
-	--color-card-background: color-mix(in oklch, var(--color-foreground) 1%, var(--color-background));
 }
 
 *, *::before, *::after {
@@ -110,6 +109,50 @@ p {
 	padding-left: calc(0.75rem - 2px);
 	padding-block: 0.25rem;
 	border-left: 2px solid var(--color-foreground);
+}
+
+.link-with-icon {
+	position: relative;
+	display: flex;
+	z-index: 1;
+	flex-direction: row;
+	gap: 0.25rem;
+	align-items: center;
+	font-weight: 500;
+	color: var(--color-foreground);
+	text-decoration: none;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		mask: var(--icon) center / contain no-repeat;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-color: var(--color-accent);
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	&:is(:hover, :focus) {
+
+		&::before {
+			animation: wiggle 0.25s ease-in-out 2;
+		}
+
+		&::after {
+			transform-origin: left;
+			transform: scaleX(1);
+		}
+	}
 }
 /* #endregion layout */
 /* #region animations */

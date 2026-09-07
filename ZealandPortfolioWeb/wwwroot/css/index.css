@@ -76,61 +76,6 @@
 	gap: 0.5rem 1rem;
 	list-style: none;
 }
-
-.profile-link {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	gap: 0.25rem;
-	align-items: center;
-	font-weight: 500;
-	color: var(--color-foreground);
-	text-decoration: none;
-
-	&::before {
-		content: "";
-		display: inline-block;
-		width: 1em;
-		height: 1em;
-		background-color: currentColor;
-		mask: var(--icon) center / contain no-repeat;
-	}
-
-	&::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		background-color: var(--color-accent);
-		transform-origin: right;
-		transform: scaleX(0);
-		transition: transform 0.25s ease-in-out;
-	}
-
-	&.github {
-		--icon: url("/images/github.svg");
-	}
-
-	&.email {
-		--icon: url("/images/email.svg");
-	}
-
-	&.website {
-		--icon: url("/images/website.svg");
-	}
-}
-
-.profile-link:is(:hover, :focus) {
-
-	&::before {
-		animation: wiggle 0.25s ease-in-out 2;
-	}
-
-	&::after {
-		transform-origin: left;
-		transform: scaleX(1);
-	}
-}
 /* #endregion profile */
 /* #region project-categories */
 .project-categories-section {

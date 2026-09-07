@@ -12,14 +12,9 @@
 			"src": "/images/ragnarock-gasolin.webp",
 			"alt_text": "Ragnarock Gasolin"
 		},
-		"github_link": {
-			"href": "https://github.com/vlysium/RagnarockGasolin",
-			"text": "GitHub"
-		},
-		"live_link": {
-			"href": "https://gasolin.vlysium.dev/",
-			"text": "Website"
-		}
+		"description_short": "Redesign af hjemmeside om Gasolin med tidslinje, biografier, videoer, QR-koder og musikafspilning.",
+		"github_link":  "https://github.com/vlysium/RagnarockGasolin",
+		"website_link": "https://gasolin.vlysium.dev/"
 	},
 	{
 		"id": "ee5ca421-4765-40b0-8807-07218ecc9a4e",
@@ -33,14 +28,9 @@
 			"src": "/images/dsv-og-moedebooking.webp",
 			"alt_text": "DSV og mødebooking"
 		},
-		"github_link": {
-			"href": "https://github.com/vlysium/DSVMeetingRoomBooking",
-			"text": "GitHub"
-		},
-		"live_link": {
-			"href": "https://dsv-booking.vlysium.dev/",
-			"text": "Website"
-		}
+		"description_short": "Internt bookingsystem til DSV, hvor medarbejdere kan administrere mødelokaler og bookinger.",
+		"github_link": "https://github.com/vlysium/DSVMeetingRoomBooking",
+		"website_link": "https://dsv-booking.vlysium.dev/"
 	},
 	{
 		"id": "a5772365-2360-4b0a-9dc9-89d96377b1b1",
@@ -55,13 +45,8 @@
 			"src": "/images/cirkus-luna.webp",
 			"alt_text": "Cirkus Luna"
 		},
-		"github_link": {
-			"href": "https://github.com/vlysium/CircusLuna",
-			"text": "GitHub"
-		},
-		"live_link": {
-			"href": "https://circus-luna.vlysium.dev/",
-			"text": "Website"
-		}
+		"description_short": "1. semesters eksamensprojekt med en komplet webapplikation til administration af turnéplan, forestillinger, artister, kunder og billetreservationer.",
+		"github_link": "https://github.com/vlysium/CircusLuna",
+		"website_link": "https://circus-luna.vlysium.dev/"
 	}
 ]
