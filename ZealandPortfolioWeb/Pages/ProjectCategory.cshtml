@@ -9,6 +9,9 @@
     <h1 class="section-title">@Model.ProjectCategory.Name</h1>
     <p>@Model.ProjectCategory.GetInlineDescription()</p>
   </hgroup>
+
+	@if (Model.ProjectCategory.Projects.Count > 0)
+	{
 	<ul class="project-list">
     @foreach (Project project in Model.ProjectCategory.Projects)
     {
@@ -32,4 +35,11 @@
 		</li>
     }
   </ul>
+	}
+	else
+	{
+	<div class="project-category-empty-container">
+		<p class="project-category-empty-message">Hovsa, denne kategori ser ud til ikke at indeholde nogle projekter endnu. Besøg igen på et senere tidspunkt!</p>
+	</div>
+	}
 </section>

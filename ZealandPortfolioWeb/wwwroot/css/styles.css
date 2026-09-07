@@ -8,6 +8,7 @@
 
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
+	--color-background-subtle: color-mix(in oklch, var(--color-foreground) 2.5%, var(--color-background));
 }
 
 *, *::before, *::after {
@@ -46,6 +47,8 @@ p {
 
 /* outline layout */
 .main {
+	display: flex;
+	flex-direction: column;
 	min-height: calc(100svh - 3rem);
 
 	@media (min-width: 48rem) {
