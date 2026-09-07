@@ -2,7 +2,7 @@
   {
     "id": "1ceb0f15-1675-44e0-bcb1-b7cb0f259897",
     "name": "Softwarekonstruktion",
-    "description": "",
+    "description": [],
     "slug": "swc",
     "image": {
       "src": "/images/swc.webp",
@@ -17,7 +17,7 @@
   {
     "id": "7485c1c3-83b7-48ba-a8b4-775d037b15a8",
     "name": "Softwaredesign",
-    "description": "",
+    "description": [],
     "slug": "swd",
     "image": {
       "src": "/images/swd.webp",
@@ -28,7 +28,7 @@
   {
     "id": "2cd9cee9-2dce-403e-94e5-8785f5832fd2",
     "name": "IT og forretningsforståelse",
-    "description": "",
+    "description": [],
     "slug": "itf",
     "image": {
       "src": "/images/itf.webp",
@@ -39,7 +39,7 @@
   {
     "id": "eaf54806-aa62-4b0f-838c-c1c35cb65ffe",
     "name": "Teknologi",
-    "description": "",
+    "description": [],
     "slug": "tek",
     "image": {
       "src": "/images/tek.webp",

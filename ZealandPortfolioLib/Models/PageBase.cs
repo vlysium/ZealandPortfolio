@@ -20,7 +20,7 @@ public abstract class PageBase
 	/// Description of the page.
 	/// </summary>
 	[JsonPropertyName("description")]
-	public required string Description { get; init; }
+	public required List<string> Description { get; init; }
 
 	/// <summary>
 	/// Slug of the page.
@@ -42,5 +42,14 @@ public abstract class PageBase
 	public override string ToString()
 	{
 		return $"PageBase: Id: {Id}, Name: {Name}, Description: {Description}, Slug: {Slug}, Image: {Image}";
+	}
+
+	/// <summary>
+	/// Gets the inline description of the project by joining the description list into a single string.
+	/// </summary>
+	/// <returns>The inline description of the project.</returns>
+	public string GetInlineDescription()
+	{
+		return string.Join(" ", Description);
 	}
 }

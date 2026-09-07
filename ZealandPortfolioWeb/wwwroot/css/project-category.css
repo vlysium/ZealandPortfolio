@@ -43,4 +43,9 @@
 
 .project-card-title {}
 
-.project-card-description {}
+.project-card-description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-size: 0.9375rem;
+}
