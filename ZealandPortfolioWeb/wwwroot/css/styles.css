@@ -8,6 +8,7 @@
 
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
+	--color-card-background: color-mix(in oklch, var(--color-foreground) 1%, var(--color-background));
 }
 
 *, *::before, *::after {

@@ -9,14 +9,16 @@
     <h1 class="section-title">@Model.ProjectCategory.Name</h1>
     <p>@Model.ProjectCategory.Description</p>
   </hgroup>
-	<ul>
+	<ul class="project-list">
     @foreach (Project project in Model.ProjectCategory.Projects)
     {
 		<li>
-			<article>
-				<img src="@project.Image.Src" alt="@project.Image.AltText" />
-				<h2>@project.Name</h2>
-				<p>@project.Description</p>
+			<article class="project-card">
+				<img class="project-card-image" src="@project.Image.Src" alt="@project.Image.AltText" />
+				<div class="project-card-content">
+					<h2 class="project-card-title">@project.Name</h2>
+					<p class="project-card-description">@project.Description</p>
+				</div>
 			</article>
 		</li>
     }
