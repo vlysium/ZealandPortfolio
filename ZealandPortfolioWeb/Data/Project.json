@@ -3,9 +3,9 @@
 		"id": "a7db71f9-daf8-499d-b883-ad0c77cd6689",
 		"name": "Ragnarock Gasolin",
 		"description": [
-			"Ragnarock Gasolin var vores første miniprojekt, hvor vi udviklede en interaktiv webapplikation med fokus på Gasolins historie og betydning for dansk rockmusik.",
+			"Ragnarock Gasolin var mit første miniprojekt, hvor vi udviklede en interaktiv webapplikation med fokus på Gasolins historie og betydning for dansk rockmusik.",
 			"Løsningen indeholder blandt andet en historisk tidslinje, biografier, videoer, interviews og QR-kodefunktionalitet, der kobler den fysiske udstilling med webapplikationen.",
-			"Projektet blev udviklet med Razor Pages, C#, HTML, CSS og Bootstrap. Som en ekstra funktion implementerede vi JavaScript til afspilning af lydfiler med udvalgte Gasolin-numre."
+			"Projektet blev udviklet med Razor Pages, C#, HTML, CSS og Bootstrap. Som en ekstra funktion implementerede jeg JavaScript til afspilning af lydfiler med udvalgte Gasolin-numre."
 		],
 		"slug": "ragnarock-gasolin",
 		"image": {
@@ -14,13 +14,14 @@
 		},
 		"description_short": "Redesign af hjemmeside om Gasolin med tidslinje, biografier, videoer, QR-koder og musikafspilning.",
 		"github_link":  "https://github.com/vlysium/RagnarockGasolin",
-		"website_link": "https://gasolin.vlysium.dev/"
+		"website_link": "https://gasolin.vlysium.dev/",
+		"time_stamp": "2026-03-20T12:00:00Z"
 	},
 	{
 		"id": "ee5ca421-4765-40b0-8807-07218ecc9a4e",
 		"name": "DSV og mødebooking",
 		"description": [
-			"DSV og mødebooking var vores anden miniprojekt, hvor vi udviklede et internt bookingsystem til håndtering af DSV's mødelokaler. Systemet gør det muligt at se, oprette, redigere og slette bookinger samt filtrere lokaler efter blandt andet kapacitet og udstyr.",
+			"DSV og mødebooking var mit andet miniprojekt, hvor vi udviklede et internt bookingsystem til håndtering af DSV's mødelokaler. Systemet gør det muligt at se, oprette, redigere og slette bookinger samt filtrere lokaler efter blandt andet kapacitet og udstyr.",
 			"Vi anvendte 3-lagsmodellen til at strukturere applikationen og skabe en klar opdeling mellem præsentation, forretningslogik og dataadgang. Projektet blev udviklet med Razor Pages, C#, HTML, CSS, Bootstrap, objekter, lister og repositories."
 		],
 		"slug": "dsv-og-moedebooking",
@@ -30,13 +31,14 @@
 		},
 		"description_short": "Internt bookingsystem til DSV, hvor medarbejdere kan administrere mødelokaler og bookinger.",
 		"github_link": "https://github.com/vlysium/DSVMeetingRoomBooking",
-		"website_link": "https://dsv-booking.vlysium.dev/"
+		"website_link": "https://dsv-booking.vlysium.dev/",
+		"time_stamp": "2026-05-03T12:00:00Z"
 	},
 	{
 		"id": "a5772365-2360-4b0a-9dc9-89d96377b1b1",
 		"name": "Cirkus Luna",
 		"description": [
-			"Cirkus Luna var vores 1. semesters eksamensprojekt, hvor vi udviklede en komplet webapplikation til administration af et omrejsende cirkus. Systemet håndterer blandt andet turnéplaner, forestillinger, artister, kunder, billettyper og reservationer.",
+			"Cirkus Luna mit 1. semesters eksamensprojekt, hvor vi udviklede en komplet webapplikation til administration af et omrejsende cirkus. Systemet håndterer blandt andet turnéplaner, forestillinger, artister, kunder, billettyper og reservationer.",
 			"Vi implementerede funktionalitet til søgning, filtrering, sortering og visning af ledige og reserverede pladser samt validering af reservationer.",
 			"Applikationen blev udviklet i Razor Pages med C#, HTML, CSS og Bootstrap og struktureret efter 3-lagsmodellen med UI-, service- og repository-lag. Fokus var på en brugervenlig løsning med tydelig separation af ansvar og central håndtering af systemets forretningslogik."
 		],
@@ -47,6 +49,24 @@
 		},
 		"description_short": "1. semesters eksamensprojekt med en komplet webapplikation til administration af turnéplan, forestillinger, artister, kunder og billetreservationer.",
 		"github_link": "https://github.com/vlysium/CircusLuna",
-		"website_link": "https://circus-luna.vlysium.dev/"
+		"website_link": "https://circus-luna.vlysium.dev/",
+		"time_stamp": "2026-06-28T12:00:00Z"
+	},
+	{
+		"id": "b21754ef-92a7-44fb-8677-d9f376b34edf",
+		"name": "Bootstrap Website",
+		"description": [
+			"Bootstrap Website var et selvstudieprojekt baseret på kurset \"LinkedIn Learnings Bootstrap 5 Essential Training\", hvor jeg omsatte kursets teknikker til en valgfri selvstændig hjemmeside.",
+			"Jeg udviklede Zealand Digital Bureau, en moderne landing page for et digitalt bureau med ekspertise i webudvikling, SEO, digitalt content samt UX & Design. Hjemmesiden indeholder sektionerne Om os, Services og Kontakt os og blev udviklet med Bootstrap 5 med fokus på responsivt design, branding og brugervenlighed."
+		],
+		"slug": "bootstrap-website",
+		"image": {
+			"src": "/images/bootstrap-website.webp",
+			"alt_text": "Bootstrap Website"
+		},
+		"description_short": "Landing page for Zealand Digital Bureau udviklet med Bootstrap 5. Projektet omsætter viden fra LinkedIn Learnings Bootstrap-kursus til et responsivt og moderne bureau-website.",
+		"github_link": "https://github.com/vlysium/bootstrap-website",
+		"website_link": "https://bootstrap-site.vlysium.dev/",
+		"time_stamp": "2026-03-10T12:00:00Z"
 	}
 ]

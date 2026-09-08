@@ -31,7 +31,7 @@ namespace ZealandPortfolioWeb.Pages
             try
             {
                 ProjectCategory = _projectCategoryService.GetProjectCategoryWithProjectsBySlug(category);
-                ProjectCategory.Projects.Reverse(); // Reverse the order of projects to show the most recent first
+                ProjectCategory.Projects.Sort((p1, p2) => p2.TimeStamp.CompareTo(p1.TimeStamp)); // Sort projects by TimeStamp in descending order
                 return Page();
             }
             catch (KeyNotFoundException ex)
