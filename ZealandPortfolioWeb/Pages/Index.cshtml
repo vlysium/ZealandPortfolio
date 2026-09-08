@@ -2,7 +2,7 @@
 @using ZealandPortfolioLib;
 @model IndexModel
 @{
-  ViewData["Title"] = "Home page";
+  ViewData["Title"] = "Forside";
 }
 
 <header class="profile">
@@ -33,7 +33,14 @@
   </div>
 </header>
 
-<section id="project-categories" class="section project-categories-section">
+<nav class="index-navigation">
+  <ul class="index-navigation-list">
+    <li><a class="index-navigation-item" href="#projekter">Projekter</a></li>
+    <li><a class="index-navigation-item" href="#om-mig">Om mig</a></li>
+  </ul>
+</nav>
+
+<section id="projekter" class="section project-categories-section">
   <hgroup class="section-header">
     <h2 class="section-title">Projekter</h2>
     <p>Her kan du se mine projekter inden for de forskellige fagområder.</p>

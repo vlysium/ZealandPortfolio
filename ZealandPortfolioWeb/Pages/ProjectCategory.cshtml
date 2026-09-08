@@ -2,13 +2,12 @@
 @using ZealandPortfolioLib.Models
 @model ZealandPortfolioWeb.Pages.ProjectCategoryModel
 @{
+	ViewData["BackTo"] = "/Index";
+	ViewData["Title"] = Model.ProjectCategory.Name;
 }
 
 <section class="project-category-page">
-	<hgroup class="section-header">
-    <h1 class="section-title">@Model.ProjectCategory.Name</h1>
-    <p>@Model.ProjectCategory.GetInlineDescription()</p>
-  </hgroup>
+	<h2>@Model.ProjectCategory.GetInlineDescription()</h2>
 
 	@if (Model.ProjectCategory.Projects.Count > 0)
 	{
@@ -21,7 +20,7 @@
 					<img class="project-card-image" src="@project.Image.Src" alt="@project.Image.AltText" />
 				</div>
 				<div class="project-card-content">
-					<h2 class="project-card-title">@project.Name</h2>
+					<h3 class="project-card-title">@project.Name</h3>
 					<ul class="project-card-links">
 						<li><a class="link-with-icon" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
 						<li><a class="link-with-icon" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>

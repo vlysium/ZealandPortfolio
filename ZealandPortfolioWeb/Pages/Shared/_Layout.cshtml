@@ -17,6 +17,14 @@
   <body>
     <div class="app">
       <main class="main">
+        @if (ViewData["BackTo"] != null)
+        {
+        <nav class="page-navigation">
+          <a class="page-navigation-back" asp-page="@ViewData["BackTo"]"><span class="sr-only">Tilbage</span></a>
+          <h1 class="page-title">@ViewData["Title"]</h1>
+          <div class="page-navigation-spacer"></div>
+        </nav>
+        }
         @RenderBody()
       </main>
     </div>
