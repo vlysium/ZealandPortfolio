@@ -59,6 +59,8 @@ p {
 	flex-direction: row;
 	gap: 0.25rem;
 	align-items: center;
+	padding: 0.125rem 0.25rem;
+	margin: -0.125rem -0.25rem;
 	font-weight: 500;
 	color: var(--color-foreground);
 	text-decoration: none;
