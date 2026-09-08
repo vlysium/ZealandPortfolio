@@ -18,6 +18,11 @@ public class IndexModel : PageModel
     public List<ProjectCategory> ProjectCategories { get; set; } = new List<ProjectCategory>();
 
     /// <summary>
+    /// Gets or sets the display text for the number of days until graduation.
+    /// </summary>
+    public string? DisplayDaysUntilGradiation { get; set; }
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="IndexModel"/> class with the specified project category service.
     /// </summary>
     /// <param name="projectCategoryService">The project category service to use.</param>
@@ -29,5 +34,19 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         ProjectCategories = _projectCategoryService.GetAllProjectCategories();
+
+        int DaysUntilGraduation = new DateTime(2028, 6, 30).Subtract(DateTime.Today).Days;
+        switch (DaysUntilGraduation)
+        {
+            case 1:
+                DisplayDaysUntilGradiation = $" (færdig om {DaysUntilGraduation} dag)";
+                break;
+            case > 1:
+                DisplayDaysUntilGradiation = $" (færdig om {DaysUntilGraduation} dage)";
+                break;
+            default:
+                DisplayDaysUntilGradiation = null;
+                break;
+        }
     }
 }
