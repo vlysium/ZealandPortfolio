@@ -23,6 +23,11 @@ public class IndexModel : PageModel
     public string? DisplayDaysUntilGradiation { get; set; }
 
     /// <summary>
+    /// Gets or sets the number of years of age.
+    /// </summary>
+    public string YearsOfAge { get; init; } = Math.Floor((DateTime.Now - new DateTime(2000, 12, 23)).TotalDays / 365.25).ToString();
+
+    /// <summary>
     /// Initializes a new instance of the <see cref="IndexModel"/> class with the specified project category service.
     /// </summary>
     /// <param name="projectCategoryService">The project category service to use.</param>

@@ -109,8 +109,7 @@
 }
 /* #endregion navigation */
 /* #region project-categories */
-.project-categories-section {
-}
+.project-categories-section {}
 
 .project-category-list {
 	display: grid;
@@ -212,3 +211,16 @@
 	transition: color 0.25s, border-color 0.25s;
 }
 /* #endregion project-categories */
+/* #region about */
+.about-section {}
+
+.waving-hand-emoji {
+	display: inline-block;
+	transform-origin: 100% 100%;
+	cursor: default;
+
+	&:hover {
+		animation: wiggle 0.33s ease-in-out infinite;
+	}
+}
+/* #endregion about */

@@ -74,6 +74,11 @@
 	gap: 0.25rem;
 	align-items: center;
 
+	margin-left: -0.75rem;
+	padding-left: calc(0.75rem - 2px);
+	padding-block: 0.25rem;
+	border-left: 2px solid var(--color-foreground);
+
 	> * {
 		font-size: 1rem;
 	}

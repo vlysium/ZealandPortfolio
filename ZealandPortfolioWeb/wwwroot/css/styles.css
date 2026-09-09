@@ -23,6 +23,7 @@ html {
 	font-family: "Google Sans", sans-serif;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	scroll-padding-top: 3rem;
 	
 	@media (min-width: 50rem) {
 		scrollbar-gutter: stable both-edges;
@@ -37,7 +38,22 @@ img {
 
 p {
 	color: var(--color-muted);
-	line-height: 1.5;
+	line-height: 1.8;
+}
+
+code {
+	background-color: var(--color-background-subtle);
+	border: 1px solid var(--color-border);
+	border-radius: 0.25rem;
+	padding: 0.125rem 0.25rem;
+	font-family: monospace;
+	font-size: 1.077em;
+	white-space: nowrap;
+}
+
+small {
+	font-size: 0.75em;
+	color: var(--color-muted);
 }
 
 .sr-only {
@@ -52,26 +68,39 @@ p {
 	border: 0;
 }
 
-.link-with-icon {
+.italic {
+	font-style: italic;
+}
+
+.link {
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	z-index: 1;
 	flex-direction: row;
 	gap: 0.25rem;
 	align-items: center;
-	padding: 0.125rem 0.25rem;
-	margin: -0.125rem -0.25rem;
 	font-weight: 500;
 	color: var(--color-foreground);
 	text-decoration: none;
-
+	
 	&::before {
 		content: "";
 		display: inline-block;
+		order: 1;
 		width: 1em;
 		height: 1em;
 		background-color: currentColor;
-		mask: var(--icon) center / contain no-repeat;
+		mask: url("/images/external.svg") center / contain no-repeat;
+	}
+	
+	&.with-icon {
+		padding: 0.125rem 0.25rem;
+		margin: -0.125rem -0.25rem;
+		
+		&::before {
+			order: -1;
+			mask: var(--icon) center / contain no-repeat;
+		}
 	}
 
 	&::after {
@@ -214,6 +243,11 @@ p {
 	padding-left: calc(0.75rem - 2px);
 	padding-block: 0.25rem;
 	border-left: 2px solid var(--color-foreground);
+}
+
+.section-subtitle {
+	margin-top: 0.75rem;
+	font-size: 1rem;
 }
 /* #endregion layout */
 /* #region animations */

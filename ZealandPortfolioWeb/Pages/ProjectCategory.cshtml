@@ -26,8 +26,8 @@
 						<time datetime="@project.TimeStamp.ToString("yyyy-MM-dd")" title="@project.TimeStamp.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">@project.TimeAgo()</time>
 					</div>
 					<ul class="project-card-links">
-						<li><a class="link-with-icon" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
-						<li><a class="link-with-icon" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
+						<li><a class="link with-icon" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
+						<li><a class="link with-icon" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
 					</ul>
 					<div class="project-card-description">
 						@foreach (string description in project.Description)

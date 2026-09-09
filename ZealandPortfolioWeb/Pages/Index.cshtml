@@ -7,7 +7,7 @@
 
 <header class="profile">
   <div class="profile-top">
-    <img class="profile-picture" src="~/images/avatar.webp" alt="Profilbillede af Victor Ly" />
+    <img class="profile-picture" src="~/images/profile-picture.webp" alt="Profilbillede af Victor Ly" />
     <hgroup class="profile-info">
       <h1 class="profile-name">Victor Ly</h1>
       <p>Datamatiker@(Model.DisplayDaysUntilGradiation)</p>
@@ -17,17 +17,17 @@
   </div>
   <div class="profile-bottom">
     <blockquote class="profile-quote">
-      <p>Fullstack webudvikler med stor interesse og fokus på responsive frontend løsninger, webtilgængelighed og brugeroplevelse.</p>
+      <p>Fullstack webudvikler passioneret omkring æstetiske og responsive frontend løsninger, webtilgængelighed og brugeroplevelse.</p>
     </blockquote>
     <ul class="profile-link-list">
       <li>
-        <a class="link-with-icon" style="--icon: url('/images/github.svg')" href="https://github.com/vlysium" target="_blank">github.com/vlysium</a>
+        <a class="link with-icon" style="--icon: url('/images/github.svg')" href="https://github.com/vlysium" target="_blank">github.com/vlysium</a>
       </li>
       <li>
-        <a class="link-with-icon" style="--icon: url('/images/email.svg')" href="mailto:vil007@edu.zealand.dk">vil007@edu.zealand.dk</a>
+        <a class="link with-icon" style="--icon: url('/images/email.svg')" href="mailto:vil007@edu.zealand.dk">vil007@edu.zealand.dk</a>
       </li>
       <li>
-        <a class="link-with-icon" style="--icon: url('/images/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank">linkedin.com/in/vlysium</a>
+        <a class="link with-icon" style="--icon: url('/images/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank">linkedin.com/in/vlysium</a>
       </li>
     </ul>
   </div>
@@ -43,7 +43,7 @@
 <section id="projekter" class="section project-categories-section">
   <hgroup class="section-header">
     <h2 class="section-title">Projekter</h2>
-    <p>Her kan du se mine projekter inden for de forskellige fagområder.</p>
+    <p>Her kan du se et udvalg af mine projekter inden for de forskellige fagområder fra alle semestre.</p>
   </hgroup>
   <ul class="project-category-list">
     @foreach (ProjectCategory projectCategory in Model.ProjectCategories)
@@ -56,4 +56,47 @@
     </li>
     }
   </ul>
+</section>
+
+<section id="om-mig" class="section about-section">
+  <h2 class="section-title">Om mig</h2>
+  <h3 class="section-subtitle">Hvem er jeg?</h3>
+  <p>
+    <span class="italic">Hello world</span> <span class="waving-hand-emoji">👋</span>, mit navn er Victor og jeg er @Model.YearsOfAge år gammel.
+    Jeg er opvokset på Vesterbro i København, og er nu bosat i Glostrup.
+    Som uddannet multimediedesigner er jeg rigtig glad for kombinationen af det kreative og det tekniske.
+    Det er især frontend webudvikling, der fanger min interesse, og jeg synes det er mega fedt at kunne gå fra et design til et færdigt produkt, som brugere kan have glæde af.
+  </p>
+  <p>
+    Hvis din <code>CSS</code> driller dig, så er jeg <span class="italic">the man</span>. Du skal dog holde dig væk med <code>Bootstrap CSS</code>, for det er jeg allergisk overfor 😭🙏.
+    <small>Ren <code>CSS</code> er altså bare tusind gange bedre. P.S. denne side indeholder præcis 0% <code>Bootstrap CSS</code></small>
+  </p>
+  <h3 class="section-subtitle">Min historie</h3>
+  <p>
+    Det hele startede med ét spørgsmål i folkeskolen - hvad vil jeg gerne arbejde med? Spiludvikling, svarede jeg.
+    Ligesom mange andre, som også elsker at game, var det min drøm at udvikle mit eget computerspil.
+    Da jeg tog et år på <a class="link" href="https://medieskolen.dk/" target="_blank">Medieskolen Lyngby</a> for at blive klogere på, hvad jeg ville uddanne mig som,
+    blev jeg anbefalet at tage en uddannelse som multimediedesigner, da jeg var glad for at tegne digitalt og lave grafisk design.
+  </p>
+  <p>
+    Jeg tog derfor multimediedesigneruddannelsen på <a class="link" href="https://www.ek.dk/" target="_blank">KEA (nu omdøbt til EK)</a> efter gymnasiet, hvor jeg blev introduceret til at lave hjemmesider med <code>HTML</code> og <code>CSS</code>,
+    hvilket jeg synes var super spændende, og senere hen <code>JavaScript</code>, som virkelig fangede min interesse i at lave kode.
+    Det var i dette øjeblik, at jeg blev hooked på webudvikling, og jeg har siden da udviklet hjemmesider og webapplikationer, samt efterfølgende gennemført et år på top-up uddannelsen som webudvikler.
+  </p>
+  <h3 class="section-subtitle">Personlighed</h3>
+  <p>
+    Jeg er <span class="italic">måske</span> nok som den eneste i klassen, som bruger <code>Docker</code> og <code>nginx</code> til at sætte hjemmesider op på en cloud server,
+    i stedet for at bruge <a class="link" href="https://www.simply.com/dk/" target="_blank">simply.com</a> 💀, men så kan jeg nemlig også have andre webapplikationer oppe som f.eks. kører <code>Node.js</code>, <code>Python</code>, eller noget helt tredje.
+  </p>
+  <p>
+    I min fritid bruger jeg ofte tiden på gaming, se tilfældige YouTube videoer, anime, kode nogle hobbyprojekter i <code>React</code> eller bare doomscrolle på Reddit.
+    Jeg interesserer mig også for lingvistik, matematik og naturvidenskab, og synes det er super spændende at lære om, hvordan verden fungerer.
+  </p>
+  <p>
+    Jeg har også en kat ved navn <span class="italic">Cookie</span>, som jeg har haft siden maj 2026, og som jeg elsker at bruge tiden sammen med.
+    Hun er en rigtig legesyg kat og nogle gange lidt crazy når hun får zoomies, men hun er også super kærlig og elsker at putte med og følge os rundt i huset. 🐱
+  </p>
+  <p>
+    Nåh ja, fik jeg egentligt nævnt, at jeg ikke kan lide <code>Bootstrap CSS</code>? 😭😭
+  </p>
 </section>
