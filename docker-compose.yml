@@ -10,8 +10,8 @@ services:
       - ASPNETCORE_URLS=http://+:8080
     networks:
       - nginx
-    volumes:
-      - app_data:/app/Data
+    # volumes:
+    #   - app_data:/app/Data
     restart: unless-stopped
     mem_limit: 256m
 
@@ -20,5 +20,5 @@ networks:
   nginx:
     external: true
 
-volumes:
-  app_data:
+# volumes:
+#   app_data:
