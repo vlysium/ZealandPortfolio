@@ -136,7 +136,7 @@ small {
 .main {
 	display: flex;
 	flex-direction: column;
-	min-height: calc(100svh - 3rem);
+	min-height: calc(100svh - 3.5rem);
 
 	@media (min-width: 48rem) {
 		border-inline: 1px solid var(--color-border);
@@ -157,7 +157,7 @@ small {
 	z-index: 10;
 	background-color: color-mix(in oklch, var(--color-background) 90%, transparent);
 	display: grid;
-	grid-template-columns: 3rem auto 3rem;
+	grid-template-columns: 3.25rem auto 3.25rem;
 	align-items: center;
 	border-bottom: none;
 	box-shadow: 0 1px 0 0 var(--color-border);
@@ -166,6 +166,7 @@ small {
 
 .page-navigation-back {
 	display: block;
+	margin: 0.125rem;
 	padding: 0.75rem;
 	transition: background-color 0.25s;
 
