@@ -3,8 +3,6 @@ services:
   zealand-portfolio:
     image: vlysiumdev/zealand-portfolio:latest
     container_name: zealand-portfolio_web
-    expose:
-      - "8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
