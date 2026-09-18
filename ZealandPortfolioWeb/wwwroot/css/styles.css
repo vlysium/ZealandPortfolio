@@ -126,6 +126,43 @@ small {
 		}
 	}
 }
+
+.button {
+	background-color: transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25rem;
+	font-weight: 500;
+	color: var(--color-foreground);
+	text-decoration: none;
+	border: 1px solid var(--color-foreground);
+	border-radius: 0.25rem;
+	padding: 0.75rem 1rem;
+	transition: background-color 0.25s, color 0.25s;
+
+	&.with-icon {
+		
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			background-color: currentColor;
+			mask: var(--icon) center / contain no-repeat;
+		}
+	}
+
+	&:is(:hover, :focus) {
+		background-color: var(--color-accent);
+		color: var(--color-foreground);
+
+		&::before {
+			animation: wiggle 0.25s ease-in-out 2;
+		}
+	}
+}
 /* #endregion global */
 /* #region layout */
 .app {
