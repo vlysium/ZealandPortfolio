@@ -73,9 +73,9 @@ small {
 }
 
 .link {
+	z-index: 1;
 	position: relative;
 	display: inline-flex;
-	z-index: 1;
 	flex-direction: row;
 	gap: 0.25rem;
 	align-items: center;
@@ -93,12 +93,22 @@ small {
 		mask: url("/images/external.svg") center / contain no-repeat;
 	}
 	
-	&.with-icon {
+	&.icon-left {
 		padding: 0.125rem 0.25rem;
 		margin: -0.125rem -0.25rem;
 		
 		&::before {
 			order: -1;
+			mask: var(--icon) center / contain no-repeat;
+		}
+	}
+
+	&.icon-right {
+		padding: 0.125rem 0.25rem;
+		margin: -0.125rem -0.25rem;
+		
+		&::before {
+			order: 1;
 			mask: var(--icon) center / contain no-repeat;
 		}
 	}
@@ -127,7 +137,14 @@ small {
 	}
 }
 
+.stretched-link {
+	position: absolute;
+	inset: 0;
+}
+
 .button {
+	z-index: 1;
+	position: relative;
 	background-color: transparent;
 	display: flex;
 	flex-direction: row;
@@ -142,16 +159,13 @@ small {
 	padding: 0.75rem 1rem;
 	transition: background-color 0.25s, color 0.25s;
 
-	&.with-icon {
-		
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 1em;
-			height: 1em;
-			background-color: currentColor;
-			mask: var(--icon) center / contain no-repeat;
-		}
+	&.icon-left::before {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		mask: var(--icon) center / contain no-repeat;
 	}
 
 	&:is(:hover, :focus) {

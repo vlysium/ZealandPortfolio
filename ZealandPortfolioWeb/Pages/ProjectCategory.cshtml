@@ -27,16 +27,17 @@
 					</div>
 					<div class="project-card-description-short">
 						<p>@project.DescriptionShort</p>
+						<a class="stretched-link" asp-page="/Project" asp-route-category="@Model.ProjectCategory.Slug" asp-route-slug="@project.Slug"></a>
 					</div>
+					<ul class="project-card-links">
+						@if (project.WebsiteLink != null) {
+						<li><a class="link icon-left" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
+						}
+						@if (project.GithubLink != null) {
+						<li><a class="link icon-left" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
+						}
+					</ul>
 				</div>
-				<ul class="project-card-links">
-					@if (project.WebsiteLink != null) {
-					<li><a class="button with-icon" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
-					}
-					@if (project.GithubLink != null) {
-					<li><a class="button with-icon" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
-					}
-				</ul>
 			</article>
 		</li>
     }
