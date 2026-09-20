@@ -50,6 +50,13 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
+	scrollbar-color: var(--color-foreground) var(--color-background);
+
+	&::selection {
+		background-color: var(--color-accent);
+		color: var(--color-foreground);
+	}
 }
 
 html {
