@@ -15,10 +15,9 @@ builder.Services.AddSingleton<IGenericPageRepository<Project>, GenericPageReposi
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/500");
     app.UseHsts();
 }
 
@@ -26,9 +25,12 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
+app.UseStatusCodePagesWithReExecute("/404");
+
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
 app.MapRazorPages()
    .WithStaticAssets();
 

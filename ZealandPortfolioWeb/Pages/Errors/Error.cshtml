@@ -1,0 +1,12 @@
+﻿@page "/500"
+@model ErrorModel
+@{
+  ViewData["Title"] = "Serverfejl";
+}
+
+<div class="error-container" data-code="500">
+	<img class="error-image" src="/assets/illustrations/page-eaten.svg" alt="Ingen projekter" />
+	<h1 class="error-title">Serverfejl</h1>
+	<p class="error-message">Åh nej, det ser ud til at der er sket en fejl på serveren, prøv igen senere.</p>
+	<a class="link icon-left" style="--icon: url('/assets/icons/arrow-left.svg')" asp-page="/Index">Tilbage til forsiden</a>
+</div>

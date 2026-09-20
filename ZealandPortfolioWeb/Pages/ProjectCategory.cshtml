@@ -60,10 +60,10 @@
 	}
 	else
 	{
-	<div class="project-category-empty-container">
-		<img class="project-category-empty-image" src="/assets/illustrations/files-missing.svg" alt="Ingen projekter" />
-		<h3 class="project-category-empty-title">Ingen projekter</h3>
-		<p class="project-category-empty-message">Hovsa, det ser ikke ud til at <strong>@Model.ProjectCategory.Name</strong> indeholder nogle projekter endnu. Besøg igen på et senere tidspunkt!</p>
+	<div class="error-container" data-code="204">
+		<img class="error-image" src="/assets/illustrations/files-missing.svg" alt="Ingen projekter" />
+		<h3 class="error-title">Ingen projekter</h3>
+		<p class="error-message">Hovsa, det ser ikke ud til at <strong>@Model.ProjectCategory.Name</strong> indeholder nogle projekter endnu. Besøg igen på et senere tidspunkt!</p>
 	</div>
 	}
 </section>

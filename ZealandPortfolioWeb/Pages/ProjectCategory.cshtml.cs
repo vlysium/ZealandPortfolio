@@ -40,10 +40,10 @@ namespace ZealandPortfolioWeb.Pages
                 ProjectCategory.Projects.Sort((p1, p2) => p2.TimeStamp.CompareTo(p1.TimeStamp)); // Sort projects by TimeStamp in descending order
                 return Page();
             }
-            catch (KeyNotFoundException ex)
+            catch (KeyNotFoundException)
             {
-                Console.WriteLine($"Error retrieving project category with slug '{category}': {ex.Message}");
-                return RedirectToPage("/Index");
+                // Console.WriteLine($"Error retrieving project category with slug '{category}': {ex.Message}");
+                return NotFound();
             }
         }
     }

@@ -40,10 +40,10 @@ namespace ZealandPortfolioWeb.Pages
 
                 return Page();
             }
-            catch (KeyNotFoundException ex)
+            catch (KeyNotFoundException)
             {
-                Console.WriteLine($"Error retrieving project with slug '{slug}': {ex.Message}");
-                return RedirectToPage("/Index");
+                // Console.WriteLine($"Error retrieving project with slug '{slug}': {ex.Message}");
+                return NotFound();
             }
         }
     }
