@@ -80,7 +80,7 @@ img {
 	user-select: none;
 }
 
-p {
+p, li {
 	color: var(--color-muted);
 	line-height: 1.8;
 }
@@ -378,6 +378,16 @@ time {
 
 	75% {
 		transform: rotate(7.5deg);
+	}
+}
+
+@keyframes accent-pulse {
+	0%, 100% {
+		background-color: var(--color-accent);
+	}
+
+	50% {
+		background-color: var(--color-accent-light);
 	}
 }
 /* #endregion animations */

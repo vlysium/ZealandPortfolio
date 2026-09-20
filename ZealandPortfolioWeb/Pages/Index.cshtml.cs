@@ -44,10 +44,10 @@ public class IndexModel : PageModel
         switch (DaysUntilGraduation)
         {
             case 1:
-                DisplayDaysUntilGradiation = $" (færdig om {DaysUntilGraduation} dag)";
+                DisplayDaysUntilGradiation = $" (færdig om ~{DaysUntilGraduation} dag)";
                 break;
             case > 1:
-                DisplayDaysUntilGradiation = $" (færdig om {DaysUntilGraduation} dage)";
+                DisplayDaysUntilGradiation = $" (færdig om ~{DaysUntilGraduation} dage)";
                 break;
             default:
                 DisplayDaysUntilGradiation = null;

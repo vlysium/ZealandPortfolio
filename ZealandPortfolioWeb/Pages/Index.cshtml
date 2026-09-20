@@ -6,30 +6,43 @@
 }
 
 <header class="profile">
-  <div class="profile-top">
-    <img class="profile-picture" src="/assets/images/profile-picture.webp" alt="Profilbillede af Victor Ly" />
-    <hgroup class="profile-info">
+  <div class="profile-banner"></div>
+  <div class="profile-content">
+    <div class="profile-top">
+      <div class="profile-picture-wrapper">
+        <img class="profile-picture" src="/assets/images/profile-picture.webp" alt="Profilbillede af Victor Ly" />
+      </div>
+      <ul class="profile-link-list">
+        <li>
+          <a class="profile-link" style="--icon: url('/assets/icons/github.svg')" href="https://github.com/vlysium" target="_blank" title="github.com/vlysium">
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a class="profile-link" style="--icon: url('/assets/icons/email.svg')" href="mailto:vil007@edu.zealand.dk" title="vil007@edu.zealand.dk">
+            <span>Email</span>
+          </a>
+        </li>
+        <li>
+          <a class="profile-link" style="--icon: url('/assets/icons/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank" title="linkedin.com/in/vlysium">
+            <span>LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-bottom">
       <h1 class="profile-name">Victor Ly</h1>
-      <p>Datamatiker@(Model.DisplayDaysUntilGradiation)</p>
-      <p>Webudvikler</p>
-      <p>Multimediedesigner</p>
-    </hgroup>
-  </div>
-  <div class="profile-bottom">
-    <blockquote class="profile-quote">
-      <p>Fullstack webudvikler passioneret omkring æstetiske og responsive frontend løsninger, webtilgængelighed og brugeroplevelse.</p>
-    </blockquote>
-    <ul class="profile-link-list">
-      <li>
-        <a class="link icon-left" style="--icon: url('/assets/icons/github.svg')" href="https://github.com/vlysium" target="_blank">github.com/vlysium</a>
-      </li>
-      <li>
-        <a class="link icon-left" style="--icon: url('/assets/icons/email.svg')" href="mailto:vil007@edu.zealand.dk">vil007@edu.zealand.dk</a>
-      </li>
-      <li>
-        <a class="link icon-left" style="--icon: url('/assets/icons/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank">linkedin.com/in/vlysium</a>
-      </li>
-    </ul>
+      <ul class="profile-info">
+        <li>Multimediedesigner</li>
+        <li aria-hidden="true">•</li>
+        <li>Webudvikler</li>
+        <li aria-hidden="true">•</li>
+        <li>Datamatiker@(Model.DisplayDaysUntilGradiation)</li>
+      </ul>
+      <blockquote class="profile-quote">
+        <p>Fullstack webudvikler passioneret omkring æstetiske og responsive frontend løsninger, webtilgængelighed og brugeroplevelse.</p>
+      </blockquote>
+    </div>
   </div>
 </header>
 

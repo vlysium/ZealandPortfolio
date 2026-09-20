@@ -14,9 +14,9 @@
 	background-position: center 33.33%;
 	
 	&.active {
-		background-color: var(--color-accent);
+		animation: accent-pulse 4s ease-in-out infinite alternate;
 		background-image: none;
-		border: 1px solid var(--color-foreground);
+		border: 1px dashed var(--color-muted);
 		filter: none;
 		pointer-events: none;
 
@@ -126,7 +126,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 0.25rem;
+	gap: 0.5rem;
 	align-items: center;
 
 	margin-left: -0.75rem;
