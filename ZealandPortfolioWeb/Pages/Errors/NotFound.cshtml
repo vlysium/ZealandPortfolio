@@ -8,6 +8,6 @@
 <div class="error-container" data-code="404">
 	<img class="error-image" src="/assets/illustrations/page-not-found.svg" alt="Ingen projekter" />
 	<h1 class="error-title">Siden blev ikke fundet</h1>
-	<p class="error-message">Whoops, det ser ud til at den ønskede side <code>@Model.OriginalPath</code> ikke eksisterer. Har du indtastet den rigtige URL?</p>
+	<p class="error-message">Whoops, det ser ud til at den ønskede side @if (Model.OriginalPath != null) { <code>@Model.OriginalPath</code> } ikke eksisterer. Har du indtastet den rigtige URL?</p>
 	<a class="link icon-left" style="--icon: url('/assets/icons/arrow-left.svg')" asp-page="/Index">Tilbage til forsiden</a>
 </div>

@@ -1,4 +1,36 @@
 /* #region global */
+@font-face {
+  font-family: "Google Sans";
+  src: url("/assets/fonts/google-sans-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("/assets/fonts/google-sans-italic-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("/assets/fonts/google-sans-code-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("/assets/fonts/google-sans-code-italic-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
 	--color-background: oklch(0.9601 0.002 286.37);
 	--color-foreground: oklch(0.2397 0.0019 286.26);
@@ -9,6 +41,9 @@
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
 	--color-background-subtle: color-mix(in oklch, var(--color-foreground) 2.5%, var(--color-background));
+
+	--font-sans: "Google Sans", sans-serif;
+	--font-monospace: "Google Sans Code", monospace;
 }
 
 *, *::before, *::after {
@@ -20,7 +55,7 @@
 html {
 	background-color: var(--color-background);
 	color: var(--color-foreground);
-	font-family: "Google Sans", sans-serif;
+	font-family: var(--font-sans);
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	scroll-padding-top: 3rem;
@@ -53,8 +88,8 @@ code {
 	border: 1px solid var(--color-border);
 	border-radius: 0.25rem;
 	padding: 0.125rem 0.25rem;
-	font-family: monospace;
-	font-size: 1.077em;
+	font-family: var(--font-monospace);
+	font-size: 0.875em;
 	white-space: nowrap;
 }
 
@@ -90,9 +125,16 @@ time {
 	flex-direction: row;
 	gap: 0.25rem;
 	align-items: center;
+	padding: 0.125em 0.25em;
+	margin: -0.125em -0.25em;
 	font-weight: 500;
+	line-height: normal;
 	color: var(--color-foreground);
-	text-decoration: none;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--color-muted);
+	text-underline-offset: 0.375em;
+	transition: text-decoration-color 0.25s;
 
 	&:is(.icon-left, .icon-right, [target="_blank"])::before {
 		content: "";
@@ -107,24 +149,14 @@ time {
 		mask: url("/assets/icons/external.svg") center / contain no-repeat;
 	}
 	
-	&.icon-left {
-		padding: 0.125rem 0.25rem;
-		margin: -0.125rem -0.25rem;
-		
-		&::before {
-			order: -1;
-			mask: var(--icon) center / contain no-repeat;
-		}
+	&.icon-left::before {
+		order: -1;
+		mask: var(--icon) center / contain no-repeat;
 	}
 
-	&.icon-right {
-		padding: 0.125rem 0.25rem;
-		margin: -0.125rem -0.25rem;
-		
-		&::before {
-			order: 1;
-			mask: var(--icon) center / contain no-repeat;
-		}
+	&.icon-right::before {
+		order: 1;
+		mask: var(--icon) center / contain no-repeat;
 	}
 
 	&::after {
@@ -139,6 +171,7 @@ time {
 	}
 
 	&:is(:hover, :focus) {
+		text-decoration-color: var(--color-accent);
 
 		&::before {
 			animation: wiggle 0.25s ease-in-out 2;

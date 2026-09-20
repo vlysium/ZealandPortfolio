@@ -49,6 +49,8 @@
 }
 
 .profile-quote {
+	text-wrap: balance;
+
 	p::before, p::after {
 		color: var(--color-foreground);
 		font-weight: 700;

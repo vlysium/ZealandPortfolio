@@ -14,20 +14,28 @@
 		content: attr(data-code);
 		z-index: -1;
 		position: absolute;
-		font-size: 10rem;
+		font-family: var(--font-monospace);
+		font-size: 12rem;
 		font-weight: 900;
 		color: var(--color-background-subtle);
 		transform: translateY(25%);
 
 		@media (min-width: 40rem) {
-			font-size: 16rem;
+			font-size: 20rem;
 			transform: translateY(12.5%);
 		}
 	}
 }
 
 .error-image {
-	max-width: 10rem;
+	aspect-ratio: 1 / 1;
+	object-position: bottom;
+	width: 8rem;
+	overflow: visible;
+
+	@media (min-width: 40rem) {
+		width: 12rem;
+	}
 }
 
 .error-title {
@@ -36,6 +44,7 @@
 
 .error-message {
 	max-width: 40ch;
+	text-wrap: balance;
 }
 
 .error-links {
