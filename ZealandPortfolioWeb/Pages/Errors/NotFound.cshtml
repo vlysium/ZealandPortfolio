@@ -1,6 +1,7 @@
 ﻿@page "/404"
 @model ZealandPortfolioWeb.Pages.Errors.NotFoundModel
 @{
+	ViewData["BackTo"] = new string[2] { "/Index", "" };
   ViewData["Title"] = "Siden blev ikke fundet";
 }
 
