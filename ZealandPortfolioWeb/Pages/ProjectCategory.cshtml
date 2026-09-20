@@ -13,7 +13,7 @@
 			@foreach (ProjectCategory projectCategory in Model.ProjectCategories)
 			{
 			<li>
-				<a class="project-category-card @(projectCategory.Slug == Model.ProjectCategory.Slug ? "active" : "")" tabindex="@(projectCategory.Slug == Model.ProjectCategory.Slug ? -1 : 0)" style="--bg-image: url('@projectCategory.Image.Src');" asp-page="/ProjectCategory" asp-route-category="@projectCategory.Slug">
+				<a class="project-category-card @(projectCategory.Slug == Model.ProjectCategory.Slug ? "active" : "")" tabindex="@(projectCategory.Slug == Model.ProjectCategory.Slug ? -1 : 0)" style="--bg-image: url('/assets/images/@projectCategory.Image.Src');" asp-page="/ProjectCategory" asp-route-category="@projectCategory.Slug">
 					<span class="project-category-card-title">@projectCategory.Slug</span>
 					<span class="project-category-card-counter">@projectCategory.ProjectIds.Count()</span>
 				</a>
@@ -32,7 +32,7 @@
 		<li>
 			<article class="project-card">
 				<div class="project-card-image-wrapper">
-					<img class="project-card-image" src="@project.Image.Src" alt="@project.Image.AltText" />
+					<img class="project-card-image" src="/assets/images/@project.Image.Src" alt="@project.Image.AltText" />
 				</div>
 				<div class="project-card-content">
 					<div class="project-card-title">
@@ -46,10 +46,10 @@
 					</div>
 					<ul class="project-card-links">
 						@if (project.WebsiteLink != null) {
-						<li><a class="link icon-left" style="--icon: url('/images/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
+						<li><a class="link icon-left" style="--icon: url('/assets/icons/website.svg')" href="@project.WebsiteLink" target="_blank">Website</a></li>
 						}
 						@if (project.GithubLink != null) {
-						<li><a class="link icon-left" style="--icon: url('/images/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
+						<li><a class="link icon-left" style="--icon: url('/assets/icons/github.svg')" href="@project.GithubLink" target="_blank">GitHub</a></li>
 						}
 					</ul>
 				</div>

@@ -4,7 +4,7 @@
     "name": "Softwarekonstruktion",
     "slug": "swc",
     "image": {
-      "src": "/images/swc.webp",
+      "src": "swc.webp",
       "alt_text": "Softwarekonstruktion"
     },
     "project_ids": [
@@ -18,7 +18,7 @@
     "name": "Softwaredesign",
     "slug": "swd",
     "image": {
-      "src": "/images/swd.webp",
+      "src": "swd.webp",
       "alt_text": "Softwaredesign"
     },
     "project_ids": [
@@ -31,7 +31,7 @@
     "name": "IT og forretningsforståelse",
     "slug": "itf",
     "image": {
-      "src": "/images/itf.webp",
+      "src": "itf.webp",
       "alt_text": "IT og forretningsforståelse"
     },
     "project_ids": []
@@ -41,7 +41,7 @@
     "name": "Teknologi",
     "slug": "tek",
     "image": {
-      "src": "/images/tek.webp",
+      "src": "tek.webp",
       "alt_text": "Teknologi"
     },
     "project_ids": []

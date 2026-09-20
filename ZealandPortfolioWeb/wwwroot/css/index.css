@@ -191,7 +191,7 @@
 		width: 1em;
 		height: 1em;
 		background-color: currentColor;
-		mask: url("/images/arrow-right.svg") center / contain no-repeat;
+		mask: url("/assets/icons/arrow-right.svg") center / contain no-repeat;
 	}
 }
 

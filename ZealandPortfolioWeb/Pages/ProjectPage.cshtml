@@ -7,15 +7,15 @@
 }
 
 <section class="project-page">
-	<img class="project-page-image" src="@Model.Project.Image.Src" alt="@Model.Project.Image.AltText" />
+	<img class="project-page-image" src="/assets/images/@Model.Project.Image.Src" alt="@Model.Project.Image.AltText" />
 	<div class="project-page-content">
 		<h2 class="project-page-title">@Model.Project.Name</h2>
 		<ul class="project-page-links">
 			@if (Model.Project.WebsiteLink != null) {
-			<li><a class="link icon-left" style="--icon: url('/images/website.svg')" href="@Model.Project.WebsiteLink" target="_blank">Website</a></li>
+			<li><a class="link icon-left" style="--icon: url('/assets/icons/website.svg')" href="@Model.Project.WebsiteLink" target="_blank">Website</a></li>
 			}
 			@if (Model.Project.GithubLink != null) {
-			<li><a class="link icon-left" style="--icon: url('/images/github.svg')" href="@Model.Project.GithubLink" target="_blank">GitHub</a></li>
+			<li><a class="link icon-left" style="--icon: url('/assets/icons/github.svg')" href="@Model.Project.GithubLink" target="_blank">GitHub</a></li>
 			}
 		</ul>
 		<div class="project-page-description">

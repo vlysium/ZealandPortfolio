@@ -95,7 +95,7 @@ time {
 		width: 1em;
 		height: 1em;
 		background-color: currentColor;
-		mask: url("/images/external.svg") center / contain no-repeat;
+		mask: url("/assets/icons/external.svg") center / contain no-repeat;
 	}
 	
 	&.icon-left {
@@ -231,7 +231,7 @@ time {
 		width: 1.5rem;
 		height: 1.5rem;
 		background-color: var(--color-foreground);
-		mask: url("/images/arrow-navigate-back.svg") center / contain no-repeat;
+		mask: url("/assets/icons/arrow-navigate-back.svg") center / contain no-repeat;
 	}
 
 	&:hover {

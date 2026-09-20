@@ -4,7 +4,7 @@
 		"name": "Ragnarock Gasolin",
 		"slug": "ragnarock-gasolin",
 		"image": {
-			"src": "/images/ragnarock-gasolin.webp",
+			"src": "ragnarock-gasolin.webp",
 			"alt_text": "Ragnarock Gasolin"
 		},
 		"description_short": "Redesign af hjemmeside om Gasolin med tidslinje, biografier, videoer, QR-koder og musikafspilning.",
@@ -23,7 +23,7 @@
 		"name": "DSV og mødebooking",
 		"slug": "dsv-og-moedebooking",
 		"image": {
-			"src": "/images/dsv-og-moedebooking.webp",
+			"src": "dsv-og-moedebooking.webp",
 			"alt_text": "DSV og mødebooking"
 		},
 		"description_short": "Internt bookingsystem til DSV, hvor medarbejdere kan administrere mødelokaler og bookinger.",
@@ -42,7 +42,7 @@
 		"name": "Cirkus Luna",
 		"slug": "cirkus-luna",
 		"image": {
-			"src": "/images/cirkus-luna.webp",
+			"src": "cirkus-luna.webp",
 			"alt_text": "Cirkus Luna"
 		},
 		"description_short": "1. semesters eksamensprojekt med en komplet webapplikation til administration af turnéplan, forestillinger, artister, kunder og billetreservationer.",
@@ -61,7 +61,7 @@
 		"name": "Bootstrap Website",
 		"slug": "bootstrap-website",
 		"image": {
-			"src": "/images/bootstrap-website.webp",
+			"src": "bootstrap-website.webp",
 			"alt_text": "Bootstrap Website"
 		},
 		"description_short": "Landing page for Zealand Digital Bureau udviklet med Bootstrap 5. Projektet omsætter viden fra LinkedIn Learnings Bootstrap-kursus til et responsivt og moderne bureau-website.",
@@ -80,7 +80,7 @@
 		"name": "Portfolio Opgave",
 		"slug": "portfolio-opgave",
 		"image": {
-			"src": "/images/portfolio-opgave.webp",
+			"src": "portfolio-opgave.webp",
 			"alt_text": "Portfolio Opgave"
 		},
 		"description_short": "Portfolio hjemmesiden som du er på lige nu, samler alle mine projekter og opgaver udviklet gennem alle semestre på Datamatikeruddannelsen.",
