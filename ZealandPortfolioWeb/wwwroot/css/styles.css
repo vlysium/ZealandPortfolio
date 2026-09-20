@@ -222,8 +222,7 @@ time {
 
 .page-navigation-back {
 	display: block;
-	margin: 0.125rem;
-	padding: 0.75rem;
+	padding: 0.875rem;
 	transition: background-color 0.25s;
 
 	&::before {

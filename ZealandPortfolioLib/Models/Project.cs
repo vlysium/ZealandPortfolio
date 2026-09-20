@@ -11,6 +11,12 @@ public class Project : PageBase
 	public required string DescriptionShort { get; init; }
 
 	/// <summary>
+	/// Description of the project.
+	/// </summary>
+	[JsonPropertyName("description_long")]
+	public required List<string> DescriptionLong { get; init; }
+
+	/// <summary>
 	/// The category the project belongs to.
 	/// </summary>
 	[JsonPropertyName("category")]

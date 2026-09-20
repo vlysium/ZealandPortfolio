@@ -49,7 +49,6 @@ public class ProjectCategoryService
 		{
 			Id = projectCategory.Id,
 			Name = projectCategory.Name,
-			Description = projectCategory.Description,
 			Slug = projectCategory.Slug,
 			Image = projectCategory.Image,
 			Projects = PopulateProjects(projectCategory)
