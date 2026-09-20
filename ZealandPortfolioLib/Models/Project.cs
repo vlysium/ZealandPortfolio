@@ -11,6 +11,12 @@ public class Project : PageBase
 	public required string DescriptionShort { get; init; }
 
 	/// <summary>
+	/// The category the project belongs to.
+	/// </summary>
+	[JsonPropertyName("category")]
+	public required string Category { get; init; }
+
+	/// <summary>
 	/// Github link associated with the project.
 	/// </summary>
 	[JsonPropertyName("github_link")]
@@ -35,7 +41,7 @@ public class Project : PageBase
 
 	public override string ToString()
 	{
-		return base.ToString() + $", DescriptionShort: {DescriptionShort}, GithubLink: {GithubLink}, WebsiteLink: {WebsiteLink}, TimeStamp: {TimeStamp}";
+		return base.ToString() + $", DescriptionShort: {DescriptionShort}, Category: {Category}, GithubLink: {GithubLink}, WebsiteLink: {WebsiteLink}, TimeStamp: {TimeStamp}";
 	}
 
 	/// <summary>

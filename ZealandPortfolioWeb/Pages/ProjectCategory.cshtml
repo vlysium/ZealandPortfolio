@@ -2,7 +2,7 @@
 @using ZealandPortfolioLib.Models
 @model ZealandPortfolioWeb.Pages.ProjectCategoryModel
 @{
-	ViewData["BackTo"] = "/Index";
+	ViewData["BackTo"] = new string[2] { "/Index", "" };
 	ViewData["Title"] = Model.ProjectCategory.Name;
 }
 
@@ -27,7 +27,7 @@
 					</div>
 					<div class="project-card-description-short">
 						<p>@project.DescriptionShort</p>
-						<a class="stretched-link" asp-page="/Project" asp-route-category="@Model.ProjectCategory.Slug" asp-route-slug="@project.Slug"></a>
+						<a class="stretched-link" asp-page="/ProjectPage" asp-route-category="@Model.ProjectCategory.Slug" asp-route-slug="@project.Slug"></a>
 					</div>
 					<ul class="project-card-links">
 						@if (project.WebsiteLink != null) {

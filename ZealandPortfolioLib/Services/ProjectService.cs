@@ -24,4 +24,14 @@ public class ProjectService
 	{
 		return _projectRepository.ReadById(id);
 	}
+
+	/// <summary>
+	/// Gets a project by its slug.
+	/// </summary>
+	/// <param name="slug">The slug of the project to get.</param>
+	/// <returns>The project with the specified slug.</returns>
+	public Project GetProjectBySlug(string slug)
+	{
+		return _projectRepository.ReadBySlug(slug);
+	}
 }

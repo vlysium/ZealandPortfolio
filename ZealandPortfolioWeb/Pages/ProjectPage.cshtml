@@ -1,0 +1,28 @@
+﻿@page "/{category}/{slug}"
+@using ZealandPortfolioLib.Models
+@model ZealandPortfolioWeb.Pages.ProjectPageModel
+@{
+	ViewData["BackTo"] = new string[2] { "/ProjectCategory", Model.Project.Category };
+	ViewData["Title"] = Model.Project.Name;
+}
+
+<section class="project-page">
+	<img class="project-page-image" src="@Model.Project.Image.Src" alt="@Model.Project.Image.AltText" />
+	<div class="project-page-content">
+		<ul class="project-page-links">
+			@if (Model.Project.WebsiteLink != null) {
+			<li><a class="link icon-left" style="--icon: url('/images/website.svg')" href="@Model.Project.WebsiteLink" target="_blank">Website</a></li>
+			}
+			@if (Model.Project.GithubLink != null) {
+			<li><a class="link icon-left" style="--icon: url('/images/github.svg')" href="@Model.Project.GithubLink" target="_blank">GitHub</a></li>
+			}
+		</ul>
+		<div class="project-page-description">
+		@foreach (string description in Model.Project.Description)
+		{
+		<p>@description</p>
+		}
+		</div>
+		<time datetime="@Model.Project.TimeStamp.ToString("yyyy-MM-dd")" title="@Model.Project.TimeStamp.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">Udviklet for @Model.Project.TimeAgo()</time>
+	</div>
+</section>

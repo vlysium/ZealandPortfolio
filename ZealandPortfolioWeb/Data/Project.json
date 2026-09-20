@@ -13,6 +13,7 @@
 			"alt_text": "Ragnarock Gasolin"
 		},
 		"description_short": "Redesign af hjemmeside om Gasolin med tidslinje, biografier, videoer, QR-koder og musikafspilning.",
+		"category": "swc",
 		"github_link":  "https://github.com/vlysium/RagnarockGasolin",
 		"website_link": "https://gasolin.vlysium.dev/",
 		"time_stamp": "2026-03-20T12:00:00Z"
@@ -30,6 +31,7 @@
 			"alt_text": "DSV og mødebooking"
 		},
 		"description_short": "Internt bookingsystem til DSV, hvor medarbejdere kan administrere mødelokaler og bookinger.",
+		"category": "swc",
 		"github_link": "https://github.com/vlysium/DSVMeetingRoomBooking",
 		"website_link": "https://dsv-booking.vlysium.dev/",
 		"time_stamp": "2026-05-03T12:00:00Z"
@@ -48,6 +50,7 @@
 			"alt_text": "Cirkus Luna"
 		},
 		"description_short": "1. semesters eksamensprojekt med en komplet webapplikation til administration af turnéplan, forestillinger, artister, kunder og billetreservationer.",
+		"category": "swc",
 		"github_link": "https://github.com/vlysium/CircusLuna",
 		"website_link": "https://circus-luna.vlysium.dev/",
 		"time_stamp": "2026-05-28T12:00:00Z"
@@ -65,6 +68,7 @@
 			"alt_text": "Bootstrap Website"
 		},
 		"description_short": "Landing page for Zealand Digital Bureau udviklet med Bootstrap 5. Projektet omsætter viden fra LinkedIn Learnings Bootstrap-kursus til et responsivt og moderne bureau-website.",
+		"category": "swd",
 		"github_link": "https://github.com/vlysium/bootstrap-website",
 		"website_link": "https://bootstrap-site.vlysium.dev/",
 		"time_stamp": "2026-03-10T12:00:00Z"
