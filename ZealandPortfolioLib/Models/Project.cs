@@ -20,13 +20,13 @@ public class Project : PageBase
 	/// Github link associated with the project.
 	/// </summary>
 	[JsonPropertyName("github_link")]
-	public required string GithubLink { get; init; }
+	public required string? GithubLink { get; init; }
 
 	/// <summary>
 	/// Website link associated with the project.
 	/// </summary>
 	[JsonPropertyName("website_link")]
-	public required string WebsiteLink { get; init; }
+	public required string? WebsiteLink { get; init; }
 
 	/// <summary>
 	/// The date and time when the project was created or submitted.
