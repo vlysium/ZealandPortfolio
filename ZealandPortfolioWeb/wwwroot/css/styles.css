@@ -35,11 +35,17 @@ img {
 	height: auto;
 	object-fit: cover;
 	pointer-events: none;
+	user-select: none;
 }
 
 p {
 	color: var(--color-muted);
 	line-height: 1.8;
+}
+
+strong {
+	font-weight: 500;
+	color: var(--color-foreground);
 }
 
 code {
