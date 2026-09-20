@@ -6,10 +6,19 @@
 
 .project-page-image {
 	aspect-ratio: 5 / 3;
+	border-bottom: 1px solid var(--color-border);
 	width: 100%;
 	height: 100%;
 	max-height: 33dvh;
 	transition: transform 0.25s;
+}
+
+.project-page-title {
+	margin-left: -0.75rem;
+	padding-left: calc(0.75rem - 2px);
+	padding-block: 0.25rem;
+	border-left: 2px solid var(--color-foreground);
+	font-size: 1.25rem;
 }
 
 .project-page-content {

@@ -104,7 +104,7 @@
 	transition: background-color 0.25s;
 	
 	&:is(:hover, :focus) {
-		background-color: color-mix(in oklch, var(--color-foreground) 2.5%, transparent);
+		background-color: var(--color-background-subtle);
 	}
 }
 /* #endregion navigation */
@@ -126,6 +126,7 @@
 	--gradient-start: color-mix(in oklch, var(--color-foreground) 50%, transparent);
 	--gradient-end: color-mix(in oklch, var(--color-foreground) 10%, transparent);
 	position: relative;
+	background-color: var(--color-background-subtle);
 	background-image: linear-gradient(0deg, var(--gradient-start) 20%, var(--gradient-end) 100%), var(--bg-image);
 	background-size: cover;
 	background-repeat: no-repeat;
