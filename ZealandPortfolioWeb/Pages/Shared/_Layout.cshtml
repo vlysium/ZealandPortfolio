@@ -34,7 +34,13 @@
       </main>
     </div>
     <footer class="footer">
-      <p class="footer-content">&copy; @DateTime.Now.Year - Victor Ly</p>
+      <div class="footer-content">
+        <p>&copy; @DateTime.Now.Year - Victor Ly</p>
+        <ul class="footer-links">
+          <li><a class="link" href="/404">/404</a></li>
+          <li><a class="link" href="/500">/500</a></li>
+        </ul>
+      </div>
     </footer>
     @await RenderSectionAsync("Scripts", required: false)
   </body>

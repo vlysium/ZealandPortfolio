@@ -93,14 +93,17 @@ time {
 	font-weight: 500;
 	color: var(--color-foreground);
 	text-decoration: none;
-	
-	&::before {
+
+	&:is(.icon-left, .icon-right, [target="_blank"])::before {
 		content: "";
 		display: inline-block;
-		order: 1;
 		width: 1em;
 		height: 1em;
 		background-color: currentColor;
+	}
+	
+	&[target="_blank"]::before {
+		order: 1;
 		mask: url("/assets/icons/external.svg") center / contain no-repeat;
 	}
 	
@@ -275,6 +278,10 @@ time {
 }
 
 .footer-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 	max-width: 48rem;
 	padding: 0.75rem;
 	margin: 0 auto;
@@ -284,6 +291,13 @@ time {
 	@media (min-width: 48rem) {
 		border-inline: 1px solid var(--color-border);
 	}
+}
+
+.footer-links {
+	display: flex;
+	flex-direction: row;
+	gap: 0.75rem;
+	list-style: none;
 }
 
 .section {
