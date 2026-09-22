@@ -1,5 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
 	profileBannerTextWiggleAnimation();
+	indexNavigationScrollSpy();
 });
 
 function profileBannerTextWiggleAnimation() {
@@ -50,3 +51,37 @@ function profileBannerTextWiggleAnimation() {
 		paragraph.appendChild(span);
 	});
 }
+
+function indexNavigationScrollSpy() {
+	const navigationItems = [...document.querySelectorAll(".index-navigation-item")];
+
+	const sections = navigationItems.map(navigationItem => document.querySelector(navigationItem.getAttribute("href"))).filter(Boolean);
+
+	const visibleSections = new Set();
+
+	const toggleActive = (section) => {
+		const activeNavigationItem = navigationItems.find(navigationItem => navigationItem.getAttribute("href") === `#${section.id}`);
+
+		if (!activeNavigationItem) return;
+
+		navigationItems.forEach(navigationItem => navigationItem.classList.toggle("active-section", navigationItem === activeNavigationItem));
+	};
+
+	// Use IntersectionObserver to detect which sections are currently visible in the viewport.
+	const observer = new IntersectionObserver(
+		entries => {
+			entries.forEach(entry => entry.isIntersecting ? visibleSections.add(entry.target) : visibleSections.delete(entry.target));
+
+			const currentSection = [...visibleSections].sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top)[0];
+
+			// If no sections are within the viewport, default to the first section.
+			currentSection ? toggleActive(currentSection) : toggleActive(sections[0]);
+		},
+		{
+			rootMargin: "-12.5% 0px -70% 0px"
+		}
+	);
+
+	sections.forEach(section => observer.observe(section));
+}
+
