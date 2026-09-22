@@ -54,7 +54,7 @@
 	scrollbar-color: var(--color-foreground) var(--color-background);
 
 	&::selection {
-		background-color: var(--color-accent);
+		background-color: var(--color-accent-light);
 		color: var(--color-foreground);
 	}
 }

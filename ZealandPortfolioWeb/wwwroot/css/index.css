@@ -88,6 +88,7 @@
 	position: relative;
 	z-index: 1;
 	border-radius: 50%;
+	filter: grayscale(0.75) contrast(1.1);
 }
 
 .profile-link-list {
