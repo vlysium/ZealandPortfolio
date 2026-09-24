@@ -18,7 +18,6 @@ public class GenericPageRepository<T> : IGenericPageRepository<T> where T : Page
 	/// <summary>
 	/// Initializes a new instance of the <see cref="GenericPageRepository{T}"/> class.
 	/// </summary>
-	/// <param name="fileName">Name of the file to read the pages from.</param>
 	/// <exception cref="FileNotFoundException">Thrown when the specified file is not found.</exception>
 	/// <exception cref="InvalidOperationException">Thrown when the file is empty or does not contain valid JSON.</exception>
 	public GenericPageRepository()
