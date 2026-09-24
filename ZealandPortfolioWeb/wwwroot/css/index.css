@@ -232,10 +232,11 @@
 	text-align: center;
 	text-wrap: nowrap;
 	color: var(--color-foreground);
-	transition: background-color 0.25s;
+	transition: background-color 0.25s, font-weight 0.25s;
 
 	&.active-section {
 		anchor-name: --active-section;
+		font-weight: 700;
 	}
 	
 	&:is(:hover, :focus) {
