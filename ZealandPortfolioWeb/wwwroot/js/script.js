@@ -4,7 +4,9 @@
 });
 
 function profileBannerTextWiggleAnimation() {
-	const paragraph = document.querySelector(".profile-banner-text");
+	const paragraph = document.querySelector(".profile-banner-text") ?? null;
+
+	if (!paragraph) return;
 	
 	const random = (min, max) => Math.random() * (max - min) + min;
 	
@@ -53,7 +55,9 @@ function profileBannerTextWiggleAnimation() {
 }
 
 function indexNavigationScrollSpy() {
-	const navigationItems = [...document.querySelectorAll(".index-navigation-item")];
+	const navigationItems = [...document.querySelectorAll(".index-navigation-item")] ?? null;
+
+	if (!navigationItems) return;
 
 	const sections = navigationItems.map(navigationItem => document.querySelector(navigationItem.getAttribute("href"))).filter(Boolean);
 
