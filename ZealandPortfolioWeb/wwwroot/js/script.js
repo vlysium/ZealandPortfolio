@@ -1,6 +1,8 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
 	profileBannerTextWiggleAnimation();
 	indexNavigationScrollSpy();
+	countCommentFormMessageCharacters();
+	commentForm();
 });
 
 function profileBannerTextWiggleAnimation() {
@@ -89,3 +91,83 @@ function indexNavigationScrollSpy() {
 	sections.forEach(section => observer.observe(section));
 }
 
+function countCommentFormMessageCharacters() {
+	const commentMessage = document.querySelector("#comment-form-message") ?? null;
+	const commentMessageMax = document.querySelector(".comment-form-message-max") ?? null;
+
+	if (!commentMessage || !commentMessageMax) return;
+
+	commentMessage.addEventListener("input", () => {
+		commentMessageMax.textContent = commentMessage.value.length;
+	});
+}
+
+function commentForm() {
+	const commentForm = document.querySelector(".comment-form") ?? null;
+
+	if (!commentForm) return;
+
+	const submitButton = commentForm.querySelector("button[type=\"submit\"]");
+
+	// Enable or disable the submit button based on the form's validity.
+	commentForm.querySelectorAll(".comment-form input, .comment-form textarea").forEach(input => {
+		input.addEventListener("input", () => {
+			const isValid = commentForm.checkValidity();
+			submitButton.disabled = !isValid;
+		});
+	});
+
+	// Handle form submission with AJAX to prevent page reload and allow for server-side validation.
+	commentForm.addEventListener("submit", async (event) => {
+		event.preventDefault();
+
+		const form = event.target;
+		const formData = new FormData(form);
+
+		const response = await fetch(form.action, {
+			method: "POST",
+			body: formData,
+			headers: {
+				"RequestVerificationToken": form.querySelector('input[name="__RequestVerificationToken"]').value
+			}
+    });
+
+		if (response.ok) {
+			document.querySelector("#comment-popup").close();
+			form.querySelector(".comment-form-message-max").textContent = "0";
+			form.reset();
+
+			insertCommentIntoGuestbook(formData);
+			displaySuccessToast();
+		}
+	});
+
+	// Insert the new comment into the guestbook without reloading the page.
+	const insertCommentIntoGuestbook = (formData) => {
+		const commentTemplateClone = document.querySelector("#comment-card-template").content.cloneNode(true);
+
+		const commentList = document.querySelector(".comment-list");
+
+		commentTemplateClone.querySelector(".comment-card-initial").textContent = formData.get("UserComment.Author").charAt(0);
+		commentTemplateClone.querySelector(".comment-card-author").textContent = formData.get("UserComment.Author");
+		commentTemplateClone.querySelector(".comment-card-datetime").textContent = "Nu";
+		commentTemplateClone.querySelector(".comment-card-message").textContent = formData.get("UserComment.Message");
+
+		// Limit the number of comments displayed to 10 by removing the last comment if necessary.
+		if (commentList.childElementCount >= 10) {
+			commentList.lastElementChild.remove();
+		}
+
+		commentList.prepend(commentTemplateClone);
+	}
+
+	// Display a success toast message to the user after successfully submitting a comment.
+	const displaySuccessToast = () => {
+		const toast = document.createElement("div");
+		toast.className = "comment-success-toast";
+		toast.textContent = "Tak for din besked, den er nu tilføjet til gæstebogen!";
+		document.body.appendChild(toast);
+
+		setTimeout(() => document.body.removeChild(toast), 5000);
+	}
+}

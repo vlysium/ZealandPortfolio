@@ -37,6 +37,7 @@
 	--color-accent: oklch(0.9369 0.1283 102.82);
 	--color-accent-dark: oklch(0.926265 0.147827 102.8842);
 	--color-accent-light: oklch(0.9482 0.106 102.64);
+	--color-danger: oklch(0.584245 0.233809 30.073801);
 
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
@@ -57,6 +58,10 @@
 		background-color: var(--color-accent-light);
 		color: var(--color-foreground);
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 html {
@@ -68,6 +73,11 @@ html {
 	
 	@media (min-width: 50rem) {
 		scrollbar-gutter: stable both-edges;
+	}
+
+	&:has(:open) {
+		overflow: hidden;
+		scrollbar-gutter: auto;
 	}
 }
 
@@ -111,6 +121,22 @@ time {
 	font-style: italic;
 }
 
+input, textarea {
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	color: var(--color-foreground);
+	background-color: var(--color-background-subtle);
+	border: 1px solid var(--color-border);
+	border-radius: 0.25rem;
+	padding: 0.5rem 0.75rem;
+	transition: border 0.25s;
+
+	&:focus {
+		outline: none;
+		border: 1px solid var(--color-foreground);
+	}
+}
+
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -127,23 +153,94 @@ time {
 	font-style: italic;
 }
 
+.stretched-link {
+	position: absolute;
+	inset: 0;
+}
+/* #endregion global */
+/* #region ui-elements */
 .link {
-	z-index: 1;
-	position: relative;
 	display: inline-flex;
-	flex-direction: row;
-	gap: 0.25rem;
-	align-items: center;
-	/* padding: 0.125em 0.25em;
-	margin: -0.125em -0.25em; */
-	font-weight: 500;
-	line-height: normal;
-	color: var(--color-foreground);
 	text-decoration-style: dotted;
 	text-decoration-thickness: 1px;
 	text-decoration-color: var(--color-muted);
 	text-underline-offset: 0.375em;
 	transition: text-decoration-color 0.25s;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-color: var(--color-accent);
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	&:is(:hover, :focus) {
+		text-decoration-color: var(--color-accent);
+
+		&::after {
+			transform-origin: left;
+			transform: scaleX(1);
+		}
+	}
+}
+
+.button {
+	background-color: transparent;
+	display: flex;
+	border: 1px solid var(--color-foreground);
+	border-radius: 2rem;
+	padding: 0.75rem 1rem;
+	border: none;
+	font-family: var(--font-sans);
+	font-size: 1rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.25s, color 0.25s;
+
+	&:is(:hover, :focus) {
+		background-color: var(--color-accent);
+		color: var(--color-foreground);
+	}
+
+	&:disabled {
+		cursor: default;
+	}
+}
+
+.button-primary {
+	background-color: var(--color-accent-dark);
+	color: var(--color-foreground);
+
+	&:disabled {
+		background-color: color-mix(in oklch, var(--color-accent-dark), transparent 50%);
+		color: color-mix(in oklch, var(--color-foreground), transparent 50%);
+	}
+}
+
+.button-ghost {
+	background-color: var(--color-background-subtle);
+	color: var(--color-foreground);
+
+	&:is(:hover, :focus) {
+		background-color: var(--color-accent);
+	}
+}
+
+/* shared styles and icons */
+.link, .button {
+	z-index: 1;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25rem;
+	font-weight: 500;
+	line-height: normal;
+	color: var(--color-foreground);
 
 	&:is(.icon-left, .icon-right, [target="_blank"])::before {
 		content: "";
@@ -168,72 +265,11 @@ time {
 		mask: var(--icon) center / contain no-repeat;
 	}
 
-	&::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		background-color: var(--color-accent);
-		transform-origin: right;
-		transform: scaleX(0);
-		transition: transform 0.25s ease-in-out;
-	}
-
-	&:is(:hover, :focus) {
-		text-decoration-color: var(--color-accent);
-
-		&::before {
-			animation: wiggle 0.25s ease-in-out 2;
-		}
-
-		&::after {
-			transform-origin: left;
-			transform: scaleX(1);
-		}
+	&:not(:disabled):is(:hover, :focus)::before {
+		animation: wiggle 0.25s ease-in-out 2;
 	}
 }
-
-.stretched-link {
-	position: absolute;
-	inset: 0;
-}
-
-.button {
-	z-index: 1;
-	position: relative;
-	background-color: transparent;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 0.25rem;
-	font-weight: 500;
-	color: var(--color-foreground);
-	text-decoration: none;
-	border: 1px solid var(--color-foreground);
-	border-radius: 0.25rem;
-	padding: 0.75rem 1rem;
-	transition: background-color 0.25s, color 0.25s;
-
-	&.icon-left::before {
-		content: "";
-		display: inline-block;
-		width: 1em;
-		height: 1em;
-		background-color: currentColor;
-		mask: var(--icon) center / contain no-repeat;
-	}
-
-	&:is(:hover, :focus) {
-		background-color: var(--color-accent);
-		color: var(--color-foreground);
-
-		&::before {
-			animation: wiggle 0.25s ease-in-out 2;
-		}
-	}
-}
-/* #endregion global */
+/* #endregion ui-elements */
 /* #region layout */
 .app {
 	max-width: 48rem;

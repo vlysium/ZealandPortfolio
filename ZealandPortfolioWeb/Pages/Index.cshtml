@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using ZealandPortfolioLib;
+@using ZealandPortfolioLib.Models;
 @model IndexModel
 @{
   ViewData["Title"] = "Forside";
@@ -17,17 +18,17 @@
       </div>
       <ul class="profile-link-list">
         <li>
-          <a class="profile-link" style="--icon: url('/assets/icons/github.svg')" href="https://github.com/vlysium" target="_blank" title="github.com/vlysium">
+          <a class="profile-link button button-ghost icon-left" style="--icon: url('/assets/icons/github.svg')" href="https://github.com/vlysium" target="_blank" title="github.com/vlysium">
             <span>GitHub</span>
           </a>
         </li>
         <li>
-          <a class="profile-link" style="--icon: url('/assets/icons/email.svg')" href="mailto:vil007@edu.zealand.dk" title="vil007@edu.zealand.dk">
+          <a class="profile-link button button-ghost icon-left" style="--icon: url('/assets/icons/email.svg')" href="mailto:vil007@edu.zealand.dk" title="vil007@edu.zealand.dk">
             <span>Email</span>
           </a>
         </li>
         <li>
-          <a class="profile-link" style="--icon: url('/assets/icons/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank" title="linkedin.com/in/vlysium">
+          <a class="profile-link button button-ghost icon-left" style="--icon: url('/assets/icons/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank" title="linkedin.com/in/vlysium">
             <span>LinkedIn</span>
           </a>
         </li>
@@ -53,6 +54,7 @@
   <ul class="index-navigation-list">
     <li><a class="index-navigation-item" href="#projekter">Projekter</a></li>
     <li><a class="index-navigation-item" href="#om-mig">Om mig</a></li>
+    <li><a class="index-navigation-item" href="#gæstebog">Gæstebog</a></li>
   </ul>
 </nav>
 
@@ -124,4 +126,72 @@
       Nåh ja... fik jeg egentlig nævnt, at jeg <span class="italic">ikke</span> kan lide <code>Bootstrap CSS</code>? 😭🙏
     </p>
   </article>
+</section>
+
+<section id="gæstebog" class="section comments-section">
+  <hgroup class="section-header">
+    <h2 class="section-title">Gæstebog</h2>
+    <p>Har du lyst til at dele en tanke, give lidt feedback på hjemmesiden eller bare sige hej? Klik på knappen nedenfor og læg en lille besked i gæstebogen - det ville være hyggeligt at høre fra dig! 😊</p>
+  </hgroup>
+
+  <button class="button button-primary icon-right" style="--icon: url('/assets/icons/pencil.svg')" type="button" command="show-modal" commandfor="comment-popup">Skriv en besked</button>
+  <dialog id="comment-popup" class="comment-popup">
+    <form class="comment-form" method="post">
+      @Html.AntiForgeryToken()
+      <div class="comment-form-body">
+        <div class="comment-form-author-wrapper">
+          <label class="comment-form-author-label" for="comment-form-author">Afsender:</label>
+          <input id="comment-form-author" type="text" placeholder="Dit navn" minlength="1" maxlength="20" asp-for="UserComment.Author" required />
+        </div>
+        <div class="comment-form-message-wrapper">
+          <textarea id="comment-form-message" placeholder="Del dine tanker..." minlength="1" maxlength="200" asp-for="UserComment.Message" required></textarea>
+          <span class="comment-form-message-max" data-maxlength="200">0</span>
+        </div>
+      </div>
+      <div class="comment-form-footer">
+        <span class="comment-form-error-message" asp-validation-summary="All"></span>
+        <div class="comment-form-actions">
+          <button class="button button-primary icon-right" style="--icon: url('/assets/icons/send.svg')" type="submit" disabled>Send</button>
+          <button class="button button-ghost" type="button" command="close" commandfor="comment-popup">Annuller</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <h3 class="comment-list-title">Seneste 10 beskeder</h3>
+
+  <template id="comment-card-template">
+    <li>
+      <article class="comment-card">
+        <div class="comment-card-avatar">
+          <div class="comment-card-initial">[Initial]</div>
+        </div>
+        <span class="comment-card-header">
+          <p class="comment-card-author">[Author]</p>
+          <span>•</span>
+          <time class="comment-card-datetime" datetime="[DateTime]" title="[Title]">[TimeAgo]</time>
+        </span>
+        <p class="comment-card-message">[Message]</p>
+      </article>
+    </li>
+  </template>
+
+  <ul class="comment-list">
+    @foreach (Comment comment in Model.Latest10Comments)
+    {
+    <li>
+      <article class="comment-card">
+        <div class="comment-card-avatar">
+          <div class="comment-card-initial">@comment.GetInitial()</div>
+        </div>
+        <span class="comment-card-header">
+          <p class="comment-card-author">@comment.Author</p>
+          <span>•</span>
+          <time class="comment-card-time" datetime="@comment.CreatedAt.ToString("yyyy-MM-ddTHH:mm")" title="@comment.CreatedAt.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">@comment.TimeAgo()</time>
+        </span>
+        <p class="comment-card-message">@comment.Message</p>
+      </article>
+    </li>
+    }
+  </ul>
 </section>

@@ -10,8 +10,10 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<ProjectCategoryService>();
 builder.Services.AddSingleton<ProjectService>();
+builder.Services.AddSingleton<CommentService>();
 builder.Services.AddSingleton<IGenericPageRepository<ProjectCategory>, GenericPageRepository<ProjectCategory>>();
 builder.Services.AddSingleton<IGenericPageRepository<Project>, GenericPageRepository<Project>>();
+builder.Services.AddSingleton<ICommentRepository, CommentRepository>();
 
 var app = builder.Build();
 
@@ -31,7 +33,6 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapRazorPages().WithStaticAssets();
 
 app.Run();
