@@ -40,13 +40,45 @@
       </main>
     </div>
     <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; @DateTime.Now.Year - Victor Ly</p>
-        <ul class="footer-links">
-          <li><a class="link" href="/404">404</a></li>
-          <li><a class="link" href="/418">418</a></li>
-          <li><a class="link" href="/500">500</a></li>
-        </ul>
+      <div class="footer-container">
+        <a class="section-title" asp-page="/Index">zealand.vlysium.dev</a>
+        <nav class="footer-content">
+          <article>
+            <p class="footer-subtitle">Links</p>
+            <ul class="footer-links">
+              <li><a class="link" asp-page="/Index">Hjem</a></li>
+              <li><a class="link" asp-page="/Index" asp-fragment="projekter">Projekter</a></li>
+              <li><a class="link" asp-page="/Index" asp-fragment="om-mig">Om mig</a></li>
+              <li><a class="link" asp-page="/Index" asp-fragment="gæstebog">Gæstebog</a></li>
+            </ul>
+          </article>
+          <article>
+            <p class="footer-subtitle">Projekter</p>
+            <ul class="footer-links">
+              <li><a class="link" asp-page="/ProjectCategory" asp-route-category="swc">Softwarekonstruktion</a></li>
+              <li><a class="link" asp-page="/ProjectCategory" asp-route-category="swd">Softwaredesign</a></li>
+              <li><a class="link" asp-page="/ProjectCategory" asp-route-category="itf">IT og forretningsforståelse</a></li>
+              <li><a class="link" asp-page="/ProjectCategory" asp-route-category="tek">Teknologi</a></li>
+            </ul>
+          </article>
+          <article>
+            <p class="footer-subtitle">Kontakt</p>
+            <ul class="footer-links">
+              <li><a class="link icon-left" style="--icon: url('/assets/icons/github.svg')" href="https://github.com/vlysium" target="_blank">GitHub</a></li>
+              <li><a class="link icon-left" style="--icon: url('/assets/icons/email.svg')" href="mailto:vil007@edu.zealand.dk">Email</a></li>
+              <li><a class="link icon-left" style="--icon: url('/assets/icons/linkedin.svg')" href="https://www.linkedin.com/in/vlysium" target="_blank">LinkedIn</a></li>
+            </ul>
+          </article>
+          <article>
+            <p class="footer-subtitle">Sjove links 😉</p>
+            <ul class="footer-links">
+              <li><a class="link" asp-page="/Errors/NotFound">404</a></li>
+              <li><a class="link" asp-page="/Errors/ImATeapot">418</a></li>
+              <li><a class="link" asp-page="/Errors/Error">500</a></li>
+            </ul>
+          </article>
+        </nav>
+        <p class="copyright">&copy; @DateTime.Now.Year - Victor Ly</p>
       </div>
     </footer>
     @await RenderSectionAsync("Scripts", required: false)
