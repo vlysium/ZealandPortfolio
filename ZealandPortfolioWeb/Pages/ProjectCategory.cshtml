@@ -35,10 +35,10 @@
 					<img class="project-card-image" src="/assets/images/@project.Image.Src" alt="@project.Image.AltText" />
 				</div>
 				<div class="project-card-content">
-					<div class="project-card-title">
-						<h3>@project.Name</h3>
+					<div class="project-card-header">
+						<h3 class="project-card-title">@project.Name</h3>
 						<span aria-hidden="true">•</span>
-						<time datetime="@project.TimeStamp.ToString("yyyy-MM-dd")" title="@project.TimeStamp.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">@project.TimeAgo()</time>
+						<time class="project-card-time" datetime="@project.TimeStamp.ToString("yyyy-MM-dd")" title="@project.TimeStamp.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">@project.TimeAgo()</time>
 					</div>
 					<div class="project-card-description-short">
 						<p>@project.DescriptionShort</p>
