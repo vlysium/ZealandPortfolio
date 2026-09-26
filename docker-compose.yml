@@ -9,7 +9,7 @@ services:
     networks:
       - nginx
     volumes:
-      - app_data:/app/Data/Persistence
+      - comment_data:/app/PersistentData
     restart: unless-stopped
     mem_limit: 256m
 
@@ -19,4 +19,4 @@ networks:
     external: true
 
 volumes:
-  app_data:
+  comment_data:

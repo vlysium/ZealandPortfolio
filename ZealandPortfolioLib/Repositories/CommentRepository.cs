@@ -25,10 +25,10 @@ public class CommentRepository : ICommentRepository
 	{
 		_fileName = "Comment.json";
 
-		string path = Path.Combine("Data", _fileName);
+		string path = Path.Combine("PersistentData", _fileName);
 		if (!File.Exists(path))
 		{
-			throw new FileNotFoundException($"The file \"{_fileName}\" was not found in the \"Data\" folder.");
+			throw new FileNotFoundException($"The file \"{_fileName}\" was not found in the \"PersistentData\" folder.");
 		}
 
 		string json = File.ReadAllText(path);
@@ -49,7 +49,7 @@ public class CommentRepository : ICommentRepository
 	{
 		_comments.Add(comment);
 		string json = JsonSerializer.Serialize(_comments, new JsonSerializerOptions { WriteIndented = true });
-		File.WriteAllText(Path.Combine("Data", "Persistence", _fileName), json);
+		File.WriteAllText(Path.Combine("PersistentData", _fileName), json);
 	}
 
 	/// <summary>
