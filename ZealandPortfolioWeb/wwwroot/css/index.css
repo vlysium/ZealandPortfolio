@@ -354,6 +354,11 @@
 /* #region comment */
 .comments-section {
 	scroll-margin-top: 3.75rem;
+	min-height: 60svh;
+
+	button[command="show-modal"] {
+		width: max-content;
+	}
 }
 
 .comment-popup {
