@@ -31,6 +31,11 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Noto Color Emoji";
+  src: url("/assets/fonts/noto-color-emoji.woff2") format("woff2");
+}
+
 :root {
 	--color-background: oklch(0.9601 0.002 286.37);
 	--color-foreground: oklch(0.2397 0.0019 286.26);
@@ -43,7 +48,7 @@
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
 	--color-background-subtle: color-mix(in oklch, var(--color-foreground) 2.5%, var(--color-background));
 
-	--font-sans: "Google Sans", sans-serif;
+	--font-sans: "Google Sans", "Noto Color Emoji", sans-serif;
 	--font-monospace: "Google Sans Code", monospace;
 }
 
