@@ -11,7 +11,9 @@ public static class TimeFormatter
 	/// <returns>A string representing the relative time elapsed. </returns>
 	public static string FormatRelativeTime(DateTime dateTime)
 	{
-		TimeSpan elapsed = DateTime.Now - dateTime;
+		DateTime curentDateTime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "Central European Standard Time");
+
+		TimeSpan elapsed = curentDateTime - dateTime;
 
 		if (elapsed.TotalSeconds < 60)
 		{

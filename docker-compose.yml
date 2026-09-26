@@ -9,7 +9,7 @@ services:
     networks:
       - nginx
     volumes:
-      - app_data:/app/Data/Comment.json
+      - app_data:/app/Data/Persistence
     restart: unless-stopped
     mem_limit: 256m
 

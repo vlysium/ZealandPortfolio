@@ -49,7 +49,7 @@ public class CommentRepository : ICommentRepository
 	{
 		_comments.Add(comment);
 		string json = JsonSerializer.Serialize(_comments, new JsonSerializerOptions { WriteIndented = true });
-		File.WriteAllText(Path.Combine("Data", _fileName), json);
+		File.WriteAllText(Path.Combine("Data", "Persistence", _fileName), json);
 	}
 
 	/// <summary>
