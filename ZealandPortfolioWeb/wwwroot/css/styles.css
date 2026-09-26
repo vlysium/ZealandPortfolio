@@ -43,6 +43,7 @@
 	--color-accent-dark: oklch(0.926265 0.147827 102.8842);
 	--color-accent-light: oklch(0.9482 0.106 102.64);
 	--color-danger: oklch(0.584245 0.233809 30.073801);
+	--color-success: oklch(0.7064 0.1526 130.98);
 
 	--color-border: color-mix(in oklch, var(--color-foreground) 10%, var(--color-background));
 	--color-muted: color-mix(in oklch, var(--color-foreground) 80%, var(--color-background));
