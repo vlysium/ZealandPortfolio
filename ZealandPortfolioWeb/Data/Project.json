@@ -85,7 +85,7 @@
 		},
 		"description_short": "Portfolio hjemmesiden som du er på lige nu, samler alle mine projekter og opgaver udviklet gennem alle semestre på Datamatikeruddannelsen.",
 		"description_long": [
-		"Portfolio opgaven er en hjemmeside udviklet til at præsentere mine projekter, kompetencer og erfaringer fra datamatikeruddannelsen.",
+			"Portfolio opgaven er en hjemmeside udviklet til at præsentere mine projekter, kompetencer og erfaringer fra datamatikeruddannelsen.",
 			"Hjemmesidens design er inspireret af brugergrænseflader og layouts fra sociale medieplatforme som Twitter, Instagram, Discord og LinkedIn. Inspirationen kommer blandt andet til udtryk gennem opbygningen af profilsiden, projektoversigten og de forskellige sektioner, som tilsammen skaber en moderne og genkendelig brugeroplevelse.",
 			"Hjemmesiden er udviklet fra bunden med Razor Pages, C#, HTML, CSS og JavaScript. Bootstrap CSS er helt fjernet fra projektet. Det gør, at jeg har muligheden for selv at bygge et unikt og skræddersyet design, der passer til hjemmesidens behov."
 		],
@@ -93,5 +93,24 @@
 		"github_link": "https://github.com/vlysium/ZealandPortfolio",
 		"website_link": null,
 		"time_stamp": "2026-08-26T12:00:00Z"
+	},
+	{
+		"id": "f2983b2f-a21d-40c0-a64d-90a3a7652956",
+		"name": "Pedros Cantina",
+		"slug": "pedros-cantina",
+		"image": {
+			"src": "pedros-cantina.webp",
+			"alt_text": "Pedros Cantina"
+		},
+		"description_short": "Databaseprojekt med fokus på digital vagtplanlægning, SQL, normalisering op til 3NF og CRUD via ADO.NET. Vi arbejdede også med ACID-principper og transaktioner.",
+		"description_long": [
+			"Pedros Cantina var et databaseprojekt, hvor jeg udviklede en digital løsning til administration af medarbejdere og vagtplaner for en café. Formålet var at erstatte en manuel vagtplan med en struktureret løsning, der giver overblik over bemanding og medarbejdernes arbejdsbelastning.",
+			"Databasen blev designet ud fra en domænemodel og normaliseret op til 3. normalform (3NF) for at reducere redundans og sikre en konsistent datastruktur. Jeg udviklede SQL-scripts til oprettelse af tabeller og forespørgsler til visning af månedsplaner, beregning af medarbejdernes arbejdsbelastning samt opslag af kontaktoplysninger. Derudover udviklede jeg en database seeder til automatisk generering af vagter i databasen.",
+			"Projektet omfattede også arbejdet med ACID-principperne og SQL-transaktioner for at sikre pålidelig håndtering af databaseændringer. Fokus var på dataintegritet, effektiv dataadgang og en databasearkitektur, der understøtter både planlægning og administration af medarbejdere."
+		],
+		"category": "tek",
+		"github_link": "https://github.com/vlysium/PedrosCantina",
+		"website_link": null,
+		"time_stamp": "2026-09-28T12:00:00Z"
 	}
 ]
