@@ -37,6 +37,15 @@
 	margin-top: auto;
 }
 
+.project-page-techstack-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	list-style: none;
+	margin-top: auto;
+}
+
 .project-page-description {
 	display: flex;
 	flex-direction: column;

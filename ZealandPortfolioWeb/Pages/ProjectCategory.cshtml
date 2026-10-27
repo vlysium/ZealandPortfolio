@@ -40,6 +40,12 @@
 						<span aria-hidden="true">•</span>
 						<time class="project-card-time" datetime="@project.TimeStamp.ToString("yyyy-MM-dd")" title="@project.TimeStamp.ToString("d. MMMM yyyy", new System.Globalization.CultureInfo("da-DK"))">@project.TimeAgo()</time>
 					</div>
+					<ul class="project-card-techstack-list">
+					@foreach (string tech in project.Techstack)
+					{
+						<li class="project-card-techstack-item">@tech</li>
+					}
+					</ul>
 					<div class="project-card-description-short">
 						<p>@project.DescriptionShort</p>
 						<a class="stretched-link" asp-page="/ProjectPage" asp-route-category="@Model.ProjectCategory.Slug" asp-route-slug="@project.Slug"></a>

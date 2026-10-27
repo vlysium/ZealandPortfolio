@@ -10,6 +10,7 @@
 	<img class="project-page-image" src="/assets/images/@Model.Project.Image.Src" alt="@Model.Project.Image.AltText" />
 	<div class="project-page-content">
 		<h2 class="project-page-title">@Model.Project.Name</h2>
+		</ul>
 		<ul class="project-page-links">
 			@if (Model.Project.WebsiteLink != null) {
 			<li><a class="link icon-left" style="--icon: url('/assets/icons/website.svg')" href="@Model.Project.WebsiteLink" target="_blank">Website</a></li>
@@ -18,6 +19,11 @@
 			<li><a class="link icon-left" style="--icon: url('/assets/icons/github.svg')" href="@Model.Project.GithubLink" target="_blank">GitHub</a></li>
 			}
 		</ul>
+		<ul class="project-page-techstack-list">
+		@foreach (string tech in Model.Project.Techstack)
+		{
+			<li class="code">@tech</li>
+		}
 		<div class="project-page-description">
 		@foreach (string description in Model.Project.DescriptionLong)
 		{

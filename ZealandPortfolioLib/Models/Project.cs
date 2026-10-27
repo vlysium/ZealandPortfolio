@@ -17,6 +17,12 @@ public class Project : PageBase
 	public required List<string> DescriptionLong { get; init; }
 
 	/// <summary>
+	/// The technology stack for the project.
+	/// </summary>
+	[JsonPropertyName("techstack")]
+	public required List<string> Techstack { get; init; }
+
+	/// <summary>
 	/// The category the project belongs to.
 	/// </summary>
 	[JsonPropertyName("category")]

@@ -13,6 +13,7 @@
 			"Som en central del af projektet implementerede vi QR-kodefunktionalitet, der kobler den fysiske udstilling sammen med webapplikationen. Festivalgæster kan dermed scanne QR-koder ved forskellige udstillingsobjekter og blive sendt direkte til relevant indhold på hjemmesiden.",
 			"Projektet blev udviklet med Razor Pages, C#, HTML, CSS og Bootstrap. Som en ekstra funktion anvendte vi JavaScript til at implementere afspilning af lydfiler med udvalgte Gasolin-numre. Fokus var på at skabe en engagerende og brugervenlig oplevelse, der kombinerer tekst, billeder, video og lyd."
 		],
+		"techstack": ["Razor Pages", "C#", "HTML", "CSS", "Bootstrap", "JavaScript"],
 		"category": "swc",
 		"github_link":  "https://github.com/vlysium/RagnarockGasolin",
 		"website_link": "https://gasolin.vlysium.dev/",
@@ -32,6 +33,7 @@
 			"Systemet giver mulighed for at se tilgængelige mødelokaler, oprette nye bookinger samt redigere og slette eksisterende bookinger. Derudover kan brugeren filtrere mødelokaler efter blandt andet kapacitet og tilgængeligt udstyr.",
 			"Vi anvendte 3-lagsmodellen til at strukturere applikationen og skabe en tydelig separation mellem præsentationslag, forretningslogik og dataadgang. Projektet blev udviklet med Core Razor Pages, C#, HTML, CSS og Bootstrap og gjorde brug af objekter, lister og repositories. Projektet gav samtidig erfaring med at omsætte funktionelle krav og user stories til en sammenhængende webapplikation."
 		],
+		"techstack": ["Razor Pages", "C#", "HTML", "CSS", "Bootstrap", "JavaScript"],
 		"category": "swc",
 		"github_link": "https://github.com/vlysium/DSVMeetingRoomBooking",
 		"website_link": "https://dsv-booking.vlysium.dev/",
@@ -51,6 +53,7 @@
 			"Applikationen indeholder funktionalitet til administration af turnéplaner, byer, forestillinger, artister, kunder, billettyper og reservationer. Brugere kan søge og filtrere forestillinger efter blandt andet by og dato samt reservere billetter til kommende forestillinger. Systemet håndterer samtidig kapacitetsbegrænsninger og giver mulighed for at se en oversigt over ledige, reserverede og VIP-pladser.",
 			"Projektet blev udviklet med Razor Pages, C#, HTML, CSS og Bootstrap og struktureret efter 3-lagsmodellen med UI-, service- og repository-lag. Repository-laget håndterer dataadgang og CRUD-operationer, mens service-laget indeholder den centrale forretningslogik og validering. Projektet gav erfaring med udvikling af en større applikation, hvor flere funktioner og systemregler skal fungere sammen."
 		],
+		"techstack": ["Razor Pages", "C#", "HTML", "CSS", "Bootstrap"],
 		"category": "swc",
 		"github_link": "https://github.com/vlysium/CircusLuna",
 		"website_link": "https://circus-luna.vlysium.dev/",
@@ -70,6 +73,7 @@
 			"Som en del af projektet udviklede jeg Zealand Digital Bureau, en moderne landing page for et fiktivt digitalt bureau med ekspertise inden for webudvikling, SEO, digitalt content samt UX & Design.",
 			"Projektet gav mig indsigt i, hvordan Bootstrap 5 fungerer. Fokus var på at skabe en moderne og overskuelig brugeroplevelse, samtidig med at jeg fik mulighed for at afprøve og videreudvikle de teknikker, jeg lærte gennem kurset."
 		],
+		"techstack": ["HTML", "CSS", "Bootstrap"],
 		"category": "swd",
 		"github_link": "https://github.com/vlysium/bootstrap-website",
 		"website_link": "https://bootstrap-site.vlysium.dev/",
@@ -89,6 +93,7 @@
 			"Hjemmesidens design er inspireret af brugergrænseflader og layouts fra sociale medieplatforme som Twitter, Instagram, Discord og LinkedIn. Inspirationen kommer blandt andet til udtryk gennem opbygningen af profilsiden, projektoversigten og de forskellige sektioner, som tilsammen skaber en moderne og genkendelig brugeroplevelse.",
 			"Hjemmesiden er udviklet fra bunden med Razor Pages, C#, HTML, CSS og JavaScript. Bootstrap CSS er helt fjernet fra projektet. Det gør, at jeg har muligheden for selv at bygge et unikt og skræddersyet design, der passer til hjemmesidens behov."
 		],
+		"techstack": ["Razor Pages", "C#", "HTML", "CSS", "JavaScript"],
 		"category": "swd",
 		"github_link": "https://github.com/vlysium/ZealandPortfolio",
 		"website_link": null,
@@ -108,6 +113,7 @@
 			"Databasen blev designet ud fra en domænemodel og normaliseret op til 3. normalform (3NF) for at reducere redundans og sikre en konsistent datastruktur. Jeg udviklede SQL-scripts til oprettelse af tabeller og forespørgsler til visning af månedsplaner, beregning af medarbejdernes arbejdsbelastning samt opslag af kontaktoplysninger. Derudover udviklede jeg en database seeder til automatisk generering af vagter i databasen.",
 			"Projektet omfattede også arbejdet med ACID-principperne og SQL-transaktioner for at sikre pålidelig håndtering af databaseændringer. Fokus var på dataintegritet, effektiv dataadgang og en databasearkitektur, der understøtter både planlægning og administration af medarbejdere."
 		],
+		"techstack": ["MS SQL", "Razor Pages", "C#", "HTML", "CSS"],
 		"category": "tek",
 		"github_link": "https://github.com/vlysium/PedrosCantina",
 		"website_link": null,
