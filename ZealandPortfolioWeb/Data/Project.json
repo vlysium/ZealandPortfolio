@@ -21,15 +21,15 @@
 	},
 	{
 		"id": "ee5ca421-4765-40b0-8807-07218ecc9a4e",
-		"name": "DSV og mødebooking",
+		"name": "DSV og Mødebooking",
 		"slug": "dsv-og-moedebooking",
 		"image": {
 			"src": "dsv-og-moedebooking.webp",
-			"alt_text": "DSV og mødebooking"
+			"alt_text": "DSV og Mødebooking"
 		},
 		"description_short": "Internt bookingsystem til DSV, hvor medarbejdere kan administrere mødelokaler og bookinger.",
 		"description_long": [
-			"DSV og mødebooking var mit andet miniprojekt, hvor vi som gruppe udviklede et internt webbaseret bookingsystem til administration af DSV’s mødelokaler. Formålet var at skabe en løsning, hvor medarbejdere nemt kan få overblik over ledige mødelokaler og administrere deres bookinger.",
+			"DSV og Mødebooking var mit andet miniprojekt, hvor vi som gruppe udviklede et internt webbaseret bookingsystem til administration af DSV's mødelokaler. Formålet var at skabe en løsning, hvor medarbejdere nemt kan få overblik over ledige mødelokaler og administrere deres bookinger.",
 			"Systemet giver mulighed for at se tilgængelige mødelokaler, oprette nye bookinger samt redigere og slette eksisterende bookinger. Derudover kan brugeren filtrere mødelokaler efter blandt andet kapacitet og tilgængeligt udstyr.",
 			"Vi anvendte 3-lagsmodellen til at strukturere applikationen og skabe en tydelig separation mellem præsentationslag, forretningslogik og dataadgang. Projektet blev udviklet med Core Razor Pages, C#, HTML, CSS og Bootstrap og gjorde brug af objekter, lister og repositories. Projektet gav samtidig erfaring med at omsætte funktionelle krav og user stories til en sammenhængende webapplikation."
 		],
@@ -118,5 +118,26 @@
 		"github_link": "https://github.com/vlysium/PedrosCantina",
 		"website_link": null,
 		"time_stamp": "2026-09-28T12:00:00Z"
+	},
+	{
+		"id": "730675f0-ec46-4c3a-b553-662d9b12c9ca",
+		"name": "Roskilde Spejder Klub",
+		"slug": "roskilde-spejder-klub",
+		"image": {
+			"src": "roskilde-spejder-klub.webp",
+			"alt_text": "Roskilde Spejder Klub"
+		},
+		"description_short": "Webapplikation til spejderaktiviteter med login, session cookies og aktivitetsadministration. Udviklet med fokus på 3NF, Scrum, user stories og authentication.",
+		"description_long": [
+			"Roskilde Spejder Klub var et webprojekt, hvor vi udviklede en webapplikation til administration af aktiviteter og tilmeldinger i forbindelse med en landsdækkende spejderlejr i Hedeland ved Roskilde. Formålet var at skabe en samlet løsning, hvor spejdere kan finde og tilmelde sig aktiviteter, mens ledere kan administrere aktiviteter og deltagere.",
+			"Applikationen understøtter forskellige brugerroller med login og authentication via session cookies. Spejdere kan tilmelde og framelde sig aktiviteter samt se deres egne tilmeldinger. Ledere kan oprette, redigere og slette aktiviteter samt få overblik over deltagere. Systemet tager desuden højde for aktivitetsbegrænsninger såsom deltagerantal, aldersgrænser og særlige færdigheder.",
+			"Databasen blev designet med fokus på normalisering op til 3. normalform (3NF) for at sikre en struktureret og konsistent datamodel. Projektet blev planlagt og udviklet med Scrum som arbejdsmetode, hvor vi anvendte user stories til at definere funktionelle krav og opdele udviklingsarbejdet i overskuelige opgaver.",
+			"Projektet gav erfaring med udvikling af brugerroller, autentificering, databasedesign og agil softwareudvikling."
+		],
+		"techstack": ["MySQL", "Cookie Authentication", "Razor Pages", "C#", "HTML", "CSS"],
+		"category": "tek",
+		"github_link": "https://github.com/anas-ahm/Scout",
+		"website_link": "https://scout.vlysium.dev/",
+		"time_stamp": "2026-10-19T12:00:00Z"
 	}
 ]
